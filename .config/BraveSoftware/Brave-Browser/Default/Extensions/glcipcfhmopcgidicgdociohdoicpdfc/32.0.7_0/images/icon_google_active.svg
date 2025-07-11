@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="12px" viewBox="0 0 13 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="google-mode-light-search" transform="translate(-913.000000, -186.000000)" fill="#FFFFFF">
+            <g id="search-results" transform="translate(129.000000, 177.000000)">
+                <g id="google-search-active" transform="translate(771.000000, 0.000000)">
+                    <path d="M19.7025152,14.0100877 L25.3577247,14.0100877 C25.4423111,14.383114 25.5087719,14.7324561 25.5087719,15.2239035 C25.5087719,18.6048246 23.1947279,21.0087719 19.7085571,21.0087719 C16.3734336,21.0087719 13.6666667,18.3561404 13.6666667,15.0877193 C13.6666667,11.8192982 16.3734336,9.16666667 19.7085571,9.16666667 C21.3398675,9.16666667 22.7053348,9.75285088 23.7505818,10.7120614 L22.0346849,12.3462719 C21.5996688,11.9436404 20.8383906,11.4699561 19.7085571,11.4699561 C17.7086914,11.4699561 16.077381,13.0982456 16.077381,15.0936404 C16.077381,17.0890351 17.7086914,18.7173246 19.7085571,18.7173246 C22.0226011,18.7173246 22.8745077,17.1482456 23.0315968,16.2186404 L19.7025152,16.2186404 L19.7025152,14.0100877 Z" id="Shape-Copy"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

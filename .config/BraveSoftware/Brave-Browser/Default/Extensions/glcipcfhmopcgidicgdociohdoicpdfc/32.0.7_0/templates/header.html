@@ -1,0 +1,404 @@
+<div class="logo-wrapper" click-outside="dropdownActive = false;">
+
+  <a class="logo" href="" ng-class="{active: dropdownActive}" prevent-click>
+    <i class="icon-muzli" ng-click="clickLogo()"></i>
+    <div class="title">
+      <span>Muzli Inspiration</span>
+      <i class="icon-play" ng-click="dropdownActive = !dropdownActive"></i>
+    </div>
+  </a>
+
+  <div class="dropdown">
+    <ul ng-class="{active: dropdownActive}">
+      <li class="link-search">
+        <a href="https://search.muz.li"><i class="icon-muzli search"></i> <span>Search</span></a>
+      </li>
+      <li class="link-colors">
+        <a href="https://colors.muz.li"><i class="icon-muzli colors"></i> <span>Colors</span></a>
+      </li>
+      <li class="link-collections">
+        <a href="https://search.muz.li/inspiration/"><i class="icon-muzli collections"></i> <span>Collections</span></a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="search-container" ng-if="feedVisibleClass" ng-class="{ 'recent-sites': recentSites.length }">
+
+  <form ng-submit="search(searchModel[activeSearch], $event, activeSearch)" id="searchForm">
+
+    <div class="input" ng-class="{active: !!searchModel[activeSearch]}">
+
+      <i class="icon-search-lite"></i>
+
+      <input name="qMuzli" class="{{defaultSearch === 'muzli' ? '' : 'secondary'}}"
+        tabindex="{{defaultSearch === 'muzli' ? 4 : 5}}"
+        placeholder="{{defaultSearch === 'muzli' ? 'Search on Muzli' : 'or Muzli'}}" maxlength="50" type="text"
+        ng-model="searchModel.muzli" ng-focus="setSearch('muzli')" lookahead />
+
+      <input name="qGoogle" class="{{defaultSearch === 'web' ? '' : 'secondary'}}"
+        tabindex="{{defaultSearch === 'web' ? 4 : 5}}"
+        placeholder="{{defaultSearch === 'web' ? 'Search the Web' : 'or Web'}}" maxlength="50" type="text"
+        ng-model="searchModel.google" ng-focus="setSearch('google', $event)" lookahead />
+                
+        <i class="search-config icon-web v4-only" tabindex="4" ng-class="{active: defaultSearch === 'web'}" title="Search the Web" ng-click="search(searchModel[activeSearch], $event, 'google')" trigger-search="google"></i>
+        <i class="search-config icon-muzli v4-only" tabindex="5" ng-class="{active: defaultSearch === 'muzli'}" title="Search on Muzli" ng-click="search(searchModel[activeSearch], $event, 'muzli')" trigger-search="muzli"></i>
+      
+      <input type="submit" />
+
+    </div>
+
+  </form>
+</div>
+
+<div class="nav">
+
+  <div class="nav-icon create" ng-click="openUploadPage($event)">
+    <span class="link" title="Share something with us!"><i class="icon-upload"></i> Share your work</span>
+  </div>
+
+  <div class="nav-icon favorites" ng-cloak ng-show="user && !user.anonymous" ng-click="::clickUser()"
+    ng-class="{active: user.favoriteCount}">
+    <i class="icon icon-fav" title="Saved items"></i>
+  </div>
+
+  <div class="nav-icon notifications" ng-class="{active: user.unreadNotificationCount}">
+
+    <div class="icon" ng-click="toggleNotifications()" title="Notifications">
+      <i class="icon-notification"></i>
+      <span class="count" ng-bind="user.unreadNotificationCount" ng-if="user.unreadNotificationCount" ng-cloak></span>
+    </div>
+
+    <div class="dropdown" ng-if="areNotificationsOpen" ng-cloak click-outside="toggleNotifications()"
+      ng-class="{'all-loaded': notifications.length <= 4}">
+
+      <div class="title">
+        <p class="pull-left">You have {{user.unreadNotificationCount || 0}} new message<span
+            ng-if="user.unreadNotificationCount !== 1">s</span></p>
+      </div>
+
+      <div class="messages">
+        <ul scroll-events scroll-events-init="manual">
+
+          <li ng-repeat="notification in notifications | orderBy:'-pushedAt' | limitTo:notificationDisplayLimit "
+            ng-class="{
+            'unread': notification.isUnread,
+            'static': notification.static
+          }">
+
+            <div class="avatar">
+              <span class="icon-muzli" ng-if="!notification.avatar"></span>
+              <img ng-src="{{notification.avatar}}" alt="{{notification.name}}" ng-if="notification.avatar">
+            </div>
+
+            <div class="message" ng-class="{'has-image': notification.itemImage}">
+
+              <div class="content">
+                <p bind-html-compile="notification.content"></p>
+                <div class="timestamp">{{notification.pushedAt | date:'yyyy MMM d'}}</div>
+              </div>
+              
+              <img ng-if="notification.itemImage" ng-src="{{notification.itemImage}}" alt="{{notification.name}}">
+
+              <div class="cta" ng-if="notification.cta" bind-html-compile="notification.cta"
+                ng-click="logNotificationCta(notification, $event)"></div>
+
+            </div>
+
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="messages-empty" ng-if="!notifications.length">
+        <i class="icon-notification v4-only"></i>
+        <span>There are no messages for you</span>
+      </div>
+
+      <div class="footnote" ng-if="notifications.length > 4">
+        <a href="" ng-click="showAllNotifications()">See all</a>
+      </div>
+
+      <div class="footnote v4-only" ng-if="notifications.length > 4" ng-click="showAllNotifications()">
+        <a href=""><i class="icon-menu"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="nav-icon google-apps" ng-if="enableGoogleApps" ng-class="{active: areGoogleAppsOpen}">
+
+    <div class="icon" ng-click="toggleGoogleAppsDropdown()" title="Google Apps">
+      <i class="icon-grid-small"></i>
+    </div>
+
+    <div class="dropdown apps" ng-if="areGoogleAppsOpen" ng-cloak click-outside="toggleGoogleAppsDropdown()">
+      <div class="app-scroll">
+        <ul>
+          <li>
+            <a href="https://myaccount.google.com/?utm_source=OGB&amp;utm_medium=app&amp;authuser=0">
+              <span class="g-avatar" ng-if="user.photo && user.provider === 'google'"
+                ng-style="{'background-image': 'url(' + user.photo + ')'}"></span>
+              <span ng-if="!user.photo || user.provider !== 'google'" style="background-position: 0 460px;"></span>
+              <h3>Account</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/?authuser=0">
+              <span style="background-position: 0 -406px;"></span>
+              <h3>Search</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://business.google.com/?gmbsrc=ww-ww-ot-gs-z-gmb-l-z-h~z-ogb-u&amp;authuser=0">
+              <span style="background-position: 0 -2320px;"></span>
+              <h3>Business Profile Manager</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.google.com/?authuser=0">
+              <span style="background-position: 0 -1566px;"></span>
+              <h3>Maps</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com?authuser=0">
+              <span style="background-position: 0 0;"></span>
+              <h3>YouTube</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://gemini.google.com?authuser=0">
+              <span style="background-position: 0 -464px;"></span>
+              <h3>Gemini</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://news.google.com?authuser=0">
+              <span style="background-position: 0 -348px;"></span>
+              <h3>News</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://mail.google.com/mail/?authuser=0">
+              <span style="background-position: 0 -2030px;"></span>
+              <h3>Gmail</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://meet.google.com?hs=197&amp;authuser=0">
+              <span style="background-position: 0 -1102px;"></span>
+              <h3>Meet</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://chat.google.com?authuser=0">
+              <span style="background-position: 0 -1682px;"></span>
+              <h3>Chat</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://contacts.google.com/?authuser=0">
+              <span style="background-position: 0 -696px;"></span>
+              <h3>Contacts</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://drive.google.com/?authuser=0">
+              <span style="background-position: 0 -58px;"></span>
+              <h3>Drive</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://calendar.google.com/calendar?authuser=0">
+              <span style="background-position: 0 -2610px;"></span>
+              <h3>Calendar</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://play.google.com/?authuser=0">
+              <span style="background-position: 0 -1972px;"></span>
+              <h3>Play</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://translate.google.com/?authuser=0">
+              <span style="background-position: 0 -1218px;"></span>
+              <h3>Translate</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://photos.google.com/?authuser=0">
+              <span style="background-position: 0 -1450px;"></span>
+              <h3>Photos</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://myadcenter.google.com/?ref=app-launcher&amp;authuser=0">
+              <span style="background-position: 0 -986px;"></span>
+              <h3>My Ad Centre</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/shopping?source=og&amp;authuser=0">
+              <span style="background-position: 0 -1856px;"></span>
+              <h3>Shopping</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/finance?authuser=0">
+              <span style="background-position: 0 -116px;"></span>
+              <h3>Finance</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://docs.google.com/document/?usp=docs_alc&amp;authuser=0">
+              <span style="background-position: 0 -1392px;"></span>
+              <h3>Docs</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://docs.google.com/spreadsheets/?usp=sheets_alc&amp;authuser=0">
+              <span style="background-position: 0 -1160px;"></span>
+              <h3>Sheets</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://docs.google.com/presentation/?usp=slides_alc&amp;authuser=0">
+              <span style="background-position: 0 -2494px;"></span>
+              <h3>Slides</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://books.google.com/?authuser=0">
+              <span style="background-position: 0 -522px;"></span>
+              <h3>Books</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.blogger.com/?authuser=0">
+              <span style="background-position: 0 -2552px;"></span>
+              <h3>Blogger</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://keep.google.com?authuser=0">
+              <span style="background-position: 0 -2262px;"></span>
+              <h3>Keep</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://classroom.google.com/?authuser=0">
+              <span style="background-position: 0 -2436px;"></span>
+              <h3>Classroom</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://earth.google.com/web/?authuser=0">
+              <span style="background-position: 0 -754px;"></span>
+              <h3>Earth</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/save?authuser=0">
+              <span style="background-position: 0 -812px;"></span>
+              <h3>Saved</h3>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://artsandculture.google.com/?utm_source=ogs.google.com&amp;utm_medium=referral&amp;authuser=0">
+              <span style="background-position: 0 -580px;"></span>
+              <h3>Arts and Culture</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://ads.google.com/home/?subid=ww-ww-xs-ip-awhc-a-ogb_cons!o2&amp;authuser=0">
+              <span style="background-position: 0 -290px;"></span>
+              <h3>Google Ads</h3>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://one.google.com?utm_source=app_launcher&amp;utm_medium=web&amp;utm_campaign=all&amp;utm_content=google_oo&amp;authuser=0">
+              <span style="background-position: 0 -174px;"></span>
+              <h3>Google One</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/travel/?dest_src=al&amp;authuser=0">
+              <span style="background-position: 0 -870px;"></span>
+              <h3>Travel</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://docs.google.com/forms/?authuser=0">
+              <span style="background-position: 0 -2146px;"></span>
+              <h3>Forms</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://chrome.google.com/webstore?utm_source=app-launcher&amp;authuser=0">
+              <span style="background-position: 0 -1334px;"></span>
+              <h3>Chrome Web Store</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://passwords.google.com?utm_source=OGB&amp;utm_medium=AL&amp;authuser=0">
+              <span style="background-position: 0 -638px;"></span>
+              <h3>Password Manager</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://analytics.google.com/analytics/web?utm_source=OGB&amp;utm_medium=app&amp;authuser=0">
+              <span style="background-position: 0 -2088px;"></span>
+              <h3>Google Analytics</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <a class="user-icon" href="" ng-cloak ng-click="openMenu()" id="menuOpener" title="Settings">
+    <img class="avatar" ng-src="{{user.photo}}" alt="{{user.displayName}}" ng-if="user.photo" avatar-error />
+    <i class="icon-user" ng-if="!user.photo"></i>
+    <div class="ftx-pop settings-promo" ng-if="vm.ftxLeft.indexOf('settings') !== -1" ng-cloak></div>
+  </a>
+
+  <div class="user-dropdown v4-only" ng-if="useV4 && settingsOpen" click-outside="settingsOpen = false;">
+    
+    <div id="user" ng-cloak>
+
+      <div class="loggedIn" ng-show="user && !user.anonymous">  
+        <div class="userInfo">
+          <img class="avatar" ng-src="{{user.photo}}" alt="" ng-if="user.photo" ng-click="::closeMenu()" />
+          <i class="icon-user" ng-if="!user.photo" ng-click="::closeMenu()"></i>
+          <h5>
+            {{user.displayName || user.email}}
+            <br>
+            <span>via {{(user.provider && (user.provider[0].toUpperCase() + user.provider.substr(1)))}}</span>
+          </h5>
+        </div>
+  
+      </div>
+  
+      <div class="anonymous" ng-show="(user.anonymous || !user) && isUserResolved">
+        <a href="" ui-sref="sign-in">Sign in</a>
+        <div class="userInfo">
+          <h5>Sign in to get more from Muzli</h5>
+        </div>
+      </div>
+  
+    </div>
+
+    <a href="" ui-sref="profile"><i class="icon-user"></i> Your profile on Muzli</a>
+    <a href="" ui-sref="speed-dial"><i class="icon-link"></i> Manage Speed Dial links</a>
+    <a href="" ui-sref="settings"><i class="icon-cog"></i> System preferences</a>
+    
+    <a href="" ng-click="::logOut()" ng-if="user && !user.anonymous"><i class="icon-log-out"></i> Log Out</a>
+    
+  </div>
+
+</div>

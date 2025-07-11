@@ -1,0 +1,130 @@
+{
+   "checksum": "26bbb56f7cc27a4dc8c1019662b672e8",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13315782177224074",
+            "date_last_used": "0",
+            "guid": "da44eb06-967e-4546-8019-a3f6300767ef",
+            "id": "8",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Binance: криптовалютная биржа для торговли биткоином, эфириумом и альткоинами",
+            "type": "url",
+            "url": "https://www.binance.com/ru-UA"
+         }, {
+            "date_added": "13322180341281629",
+            "date_last_used": "13327555917401775",
+            "guid": "cfcf7509-1c34-4986-8346-1407367dde2d",
+            "id": "9",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Telegram",
+            "type": "url",
+            "url": "https://web.telegram.org/z/"
+         }, {
+            "date_added": "13316015542715114",
+            "date_last_used": "13317581424181323",
+            "guid": "2e139c34-1779-416e-b5bf-701492e2942a",
+            "id": "10",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Waves - Know more with Waves",
+            "type": "url",
+            "url": "https://wavewx.exchange/landing-page/?gclid=https://waves.exchange/"
+         }, {
+            "date_added": "13317082400435810",
+            "date_last_used": "13321313840389143",
+            "guid": "2216329d-fd2d-4271-bc63-e8b5559727c4",
+            "id": "11",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Фильмы и сериалы онлайн в хорошем качестве на Fullsee.top",
+            "type": "url",
+            "url": "https://w5.fullsee.site/"
+         }, {
+            "date_added": "13323914744331089",
+            "date_last_used": "0",
+            "guid": "1d980b2e-eaee-47e3-8cbe-2160b180cb0a",
+            "id": "12",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Stable Diffusion Online",
+            "type": "url",
+            "url": "https://stablediffusionweb.com/#demo"
+         }, {
+            "date_added": "13326151433819599",
+            "date_last_used": "0",
+            "guid": "4a5be82c-56dc-4b41-a94b-3f46b8c6a7dd",
+            "id": "13",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Получение SMS",
+            "type": "url",
+            "url": "https://sms-man.ru/"
+         } ],
+         "date_added": "13396635301407161",
+         "date_last_used": "0",
+         "date_modified": "13326151433819599",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13396635301407161",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [ {
+            "date_added": "13193082098860780",
+            "date_last_used": "0",
+            "guid": "e380c9d5-d54c-48d3-a1ed-ca2e3be947f0",
+            "id": "5",
+            "meta_info": {
+               "last_visited": "13193082098865741"
+            },
+            "name": "Обучение / Интернет-лицей | ТПУ",
+            "type": "url",
+            "url": "https://il.tpu.ru/obuchenie-article?key=cf7e52bb7b0b90448eba7440f700b094"
+         }, {
+            "date_added": "13283298680209619",
+            "date_last_used": "0",
+            "guid": "3ae82bfa-0ccf-4ac1-8b21-47cbdec24819",
+            "id": "6",
+            "name": "Авиабилеты",
+            "type": "url",
+            "url": "https://avia.yandex.ru/?win=519&clid=2323230&utm_source=distribution&utm_medium=bookmark&utm_campaign=ru"
+         }, {
+            "date_added": "13283298680209619",
+            "date_last_used": "0",
+            "guid": "f97f35c4-cdb3-4cd6-a79c-b3b5336619e2",
+            "id": "7",
+            "name": "Яндекс",
+            "type": "url",
+            "url": "https://www.yandex.ru/?win=519&clid=2323230&from=dist_bookmark"
+         } ],
+         "date_added": "13396635301407161",
+         "date_last_used": "0",
+         "date_modified": "13283298680209619",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CocCCuYBCIiBAhLfASAAkgHZAQrWAQoOY2hyb21lX3N5bmNfYm0SBTUxIWJtGhIJavkK85Q5BgARavkK85Q5BgAiNAkCAePylDkGABADGTfn9xyeaoK+IAEqHDUxIWJtL2ZkOjkxNjM3MjM1NTk0Njg4OTMxNjEiNAkCAePylDkGABADGTfn9xyeaoK+IAEqHDUxIWJtL2ZkOjkxNjM3MjM1NTk0Njg4OTMxNjEiNAkCAePylDkGABADGTfn9xyeaoK+IAEqHDUxIWJtL2ZkOjkxNjM3MjM1NTk0Njg4OTMxNjEpAzkL85Q5BgASACoYV2xjQTRtN3RtM2VnSW1JOFRYNTVidz09SAMS7AEIDRLnAQocMWs4dVZFQWZNTjZWenl2QkhoSDA4eEtkWi9nPRJmWjpBRHF0QVp3cFpPLytCVnlsc3JwTFg3TDRrR0hpRk5COXlqQ1ZkREhPN05XcWNseHpFQlBjdmNhckpTRnNxZld2OVNtSzMzUlpkZFVCMHliYm9qbE9MdzhnWFZHMmovRHdQdz09GAAgACgAMIuzhOfauP8CON6svd74MEDerL3e+DBKHG4xSm13d1c5S3JyV3JZZmw2aTBrUzJXQ3M3Zz1aHyId3XRCV1FiMzRYeFdUblBrUUFKaW1YYjBPN2xTWT1lv9BfdhLsAQgMEucBChxERDJxNjNVUU9hSjJwbGs0eS9lYURXOHNra009EmZaOkFEcXRBWndwWk8vK0JWeWxzcnBMWDdMNGtHSGl3K2VaM20yU0U2NzkwSE5IQjJvS0QyUzE4UHJTdmpkQXRQWm8va0h4OVJma3BCYTI1SGxCbE9NclpEQUhBelArZXV6b2t3PT0YACAAKAAwiqvU55Xu/QI4jdT4s/AwQI3U+LPwMEocS2lQdjdMUzRMeVNOeFZQNmJPUzg0NHlzRHRFPVofIh26SzFmdUJpeFJ2U3hyNVBhOFQ1eGpyb2FIR0o4PWUa/mapEuwBCAYS5wEKHFRaM3NvNzQyQzdhOUswSG9LcDJ5dG5uMnNmdz0SZlo6QURxdEFad3BaTy8rQlZ5bHNycExYN0w0a0dIaWhHcmg1M2M0clRiTDlwbFNqRDBhdytFWGlpc3RyZEx5WEEwRHI5VGVSVjZXc09oaVkrcWxSUUtTQTRXTUhRdlVMU3RiOVE9PRgAIAAoADCwgdijnND0AjiWx6+O2S9AlsevjtkvShwvSW1sNmMrd1R5K0NRTGszRTFuVk5jRk1ZWU09Wh8iHbVhQVBKVmpzb2dkR3JNWk9OeWlMQ2V2Kzh1Rmc9ZQAAAAAS7AEICRLnAQoccXZTWXYwTXZoWVF4amRpajVaQmUyYmF3aUVNPRJmWjpBRHF0QVp3cFpPLytCVnlsc3JwTFg3TDRrR0hpaWlqSjZtaTR0RXd5NDZCTmJEdEZZSzVBOTUzb3c1Nyt6bDZzeHpsZkJiMWJoME10T29oWkhVc1F6L0ZKRGN1S0grUTlUQT09GAAgACgAMN6JlaSS2P4COKiM9fjpMECojPX46TBKHGVDY3JMTTQ3aWwwTTA4SVEyZEtRYno3ejEzOD1aHyIdNU1zR1BTcEFiWFhHNmVBUUpjek1Lb21BMmZsZz1lo8fg/BLrAQgIEuYBChx1T21hVGczRStkekIzWHNjS1M0L05LL1RvMTA9EmZaOkFEcXRBWndwWk8vK0JWeWxzcnBMWDdMNGtHSGlKS1RqYXllYWZXVTZ0Z0pvQUdnMG1UYVNscGt0TWVyY2psbVI1ay80Sm4yRldwbDc0VkpUSnZwS0FLdWwxNzZpS09wV3BnPT0YACAAKAAw2pS30b2B/AI4yJOEjtIwQMiThI7SMEocMmtPVGZQemVsMDBrUXhDY0VwZE53dWZpV0tFPVoeIhwySGovOW1QWlNUTHdpOXdEd2xSWms4QkRFNE09ZUxSmCkSqwEIARKmAQoceXhKLzZmdmtlY3I3a3A1RVF6QjR0V0xwZGJFPRJOWjpBRHF0QVp4WmMxMG51WU4zcmszaDNjVmFwN1gyQkk2TDlMVVRFczVsM0xvWWdMYTRRQURlT1RuS3pzQUJRcmlvMHdUcHRvMVdORVFrGAAgACgAMIKCjJfPso4DOABAAEocYVJDV0xnaEY5YjVJbnFLSUR2dUovanZRa0ZjPVoAZQAAAAAS6wEIChLmAQocbzVha0dKUmg3WnJGbTlIdWxUS0h6UmcvamlVPRJmWjpBRHF0QVp3cFpPLytCVnlsc3JwTFg3TDRrR0hpRm1sN0dieGJhbkVCdU03QnpXL1VzaURQZGlyUmljUStMMmU0ZHVKRDRNWWpWdzBsZ2dBeitHdTdpZ2dTNnJmWEFlSnNQdz09GAAgACgAMKTGj7GC/PwCOL3Tp/3SMEC906f90jBKHDljR1dYS3Z4Q0xBNURWV2FoWFMwQWdyYmtuYz1aHiIcOUREMGdLSGlWSWdDbzZESjB4cS9HSkIrbkJ3PWUAAAAAEuwBCAcS5wEKHFkxTFJzUVdyY0tNem01K2RKcHNoT1JFdnpidz0SZlo6QURxdEFad3BaTy8rQlZ5bHNycExYN0w0a0dIaVNhVm1kVTV5OWg5NkphRGZxY0lzN2VES21jNmVSaHBVNjFWb2M4NlpkTFFHb05JN3ZBQ2lhL2c1ZU1yRExpWTdXd2JoUGc9PRgAIAAoADCwgdijnND0AjiWx6+O2S9AlsevjtkvShx5QkZWQ25CalYvSE1xSXpFMHBZT2xYWlRhNEE9Wh8iHdplaGpHVVI4bGI1ZFpTOEh6MzFUVlowemFlUWc9ZQAAAAASwwEIAhK+AQocWWNTVG9udkVTUHdxQ3M0TDJjclZodjY4TDk4PRJmWjpBRHF0QVp5Z2czVFY4dkJWcDNkekNLSHJuYkRuckJrMzhuL0Fqd3BYdVdmTFJFeDFGcGZBWG9hYnlFWlpQNENWaU45VDlwb1hMTjFjWlFyeEhOWk5PNnlKK2NrMER4cFZ0UT09GAAgACgAMIKCjJfPso4DOABAAEocb1BWa2h3QlJiVjY1S0NXUjIrSU9OSFdvT3U4PVoAZQAAAAASwwEIAxK+AQocbmpnRHU4OGVDcnZYcDg2cEQ3ZkhHY3FGcDg4PRJmWjpBRHF0QVp3QTZEM3hjUFdxbWl2SnNnY25sd0c1ZkU3S1NiQnVVVFc5YUd6aWp3em1hMkpqZXlFT3RJWHpjOCtsUEpwTjRGM2tlSXpuTU9ucFZOdHV0UG11ZjEyNVVMcDh3QT09GAAgACgAMIKCjJfPso4DOABAAEoceXpOQjAxY241NEE3Y1JVMHVUKy9QZ21UdFVvPVoAZQAAAAASrAIIBRKnAgocTXg0WmxkNlRyMlhNcnNDV3o3dDRyZWJBTTJZPRKmAVo6QURxdEFaekRRaWZhbG5XYytJNHRpZm5DYmFiZmFJNG9VZ1ROT0VGVFRlUnBzekFzWG5RR1NwVUZJVUdBL2ZUcGJRcW04NmFlZEdwR3JzZGFuYlFacWprVUw5cm1kTHV1VDdBbGx0YnhwNkxnRjRVaTRKdXhid1ZQR2ZOTkR0b3NOQ21JU2Ezc1JlWHBsN0FDbzY1NkUwcnN1R3F1TmpHbkJRPT0YACAAKAAwsIHYo5zQ9AI49eiBwY0tQPXogcGNLUocem9MN3RwWUdqSTEvU2JiNFpPRnI0QUh5NkdBPVoeIhxqeDBsK0VyK3hmK0tCZTh4MldHdDZ3aEloajA9ZUYUH+AS6wEICxLmAQocT1Bqc3ArL1d2Tjl3WC9WMFZDUW42NkorYllJPRJmWjpBRHF0QVp3cFpPLytCVnlsc3JwTFg3TDRrR0hpNFNwMGJkVnhvQVkzQis5V1JRNUlSQU80NzJmWkVraU90WDE2bGtmZ2ExNElHYm92aGFYelhUejZrc1lUMlhpaGVsR3hPdz09GAAgACgAMPCC7tafr/0COLW9g/rWMEC1vYP61jBKHDhEWTFzeTFNK0tGZmV6WVNYVGpwYXhMTEVURT1aHiIcdEVwNzlkTzRZTjUvNGU2RFByaFY5UnArRFZjPWWBrXl0MAE4AA==",
+   "version": 1
+}

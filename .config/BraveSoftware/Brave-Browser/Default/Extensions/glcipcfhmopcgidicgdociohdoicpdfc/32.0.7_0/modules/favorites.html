@@ -1,0 +1,16 @@
+<div class="feed-container">
+
+  <div class="feed-title" ng-if="!hideTitle">
+    <h2>Your Saved Items <span ng-show="user && user.favoriteCount"></h2>
+      <a href="" ng-hide="showFavoritesClearAll" class="clearAllStarred pull-right" ng-click="showFavoritesClearAll = true">Delete all</a>
+      <div class="confirm pull-right" ng-show="showFavoritesClearAll">Are you sure you want to delete all your saved items? <span class="true" ng-click="clearAllFavorites()">Yes</span> or <span class="false" ng-click="showFavoritesClearAll = false">Cancel</span></div></span>
+  </div>
+  
+  <scrollable-feed items="items" ng-hide="errors.length" load-on-sort check-delete-length>
+    <scrollable-feed-no-data>
+      <div class="noFavs">
+        <h5>You have no items you like yet</h5>
+      </div>
+    </scrollable-feed-no-data>
+  </scrollable-feed>
+</div>

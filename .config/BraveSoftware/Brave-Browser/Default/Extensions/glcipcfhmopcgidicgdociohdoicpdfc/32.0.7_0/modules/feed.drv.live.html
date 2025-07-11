@@ -1,0 +1,93 @@
+<section id="feed" class="live">
+
+<ul
+	infinite-scroll='::loadMore()'
+	infinite-scroll-distance='::infiniteScrollDistance'
+	infinite-scroll-immediate-check='false'
+	infinite-scroll-disabled='!feed.length'>
+
+	<li ng-repeat="item in feed track by (item.id || item.link)"
+	ng-class="::{
+		article: item.source.article && !item.video,
+		viral: !!item.viralTimes,
+		animated: item.animated || item.webm,
+		'inline-video': !!item.htmlVideo,
+		video: !!item.video,
+		playing: item.playing,
+		vlog: !!item.sub_source,
+		nsfw: !!item.nsfw || !!item.userNSFW,
+		fallbackImage: item.fallbackImage,
+		showMenu: item.showMenu,
+		}"
+	class="angular-animate"
+	data-muzli-id="{{::item.id}}">
+	
+		<div class="tile">
+
+			<a target="_blank" ng-href="{{::item.link_out}}" class="feedLink" ng-mousedown="::postClick(item, $event)">
+
+				<div class="postPhoto" >
+
+					<i ng-if="item.nsfw || item.userNSFW">NSFW</i>
+
+					<img ng-if="::!item.video" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAAAAAApWe5zwAAAAF0Uk5TAEDm2GYAAAAMSURBVHjaYmAACDAAAAIAAU9tWeEAAAAASUVORK5CYII=" muzli-lazy="{{::item.image}}" muzli-gif="{{::item.gif}}" muzli-is-gif="{{::item.isGif}}" src="" alt="" />
+
+					<video ng-if="::item.htmlVideo" ng-src="{{::item.htmlVideo}}" video-loader playsinline autoplay loop muted></video>
+
+					<muzli-video ng-if="::item.video" ng-click="::videoClick(item, $event)"></muzli-video>
+
+					<span class="badge"></span>
+
+				</div>
+
+				<div class="postInfo">
+
+					<h3 ng-bind="::item.title"></h3>
+					
+					<span class="source">{{::item.domainName}}</span>
+					<span class="created">{{item.created | timeAgo}}</span>
+				</div>
+				
+				<div class="postStats">
+					<div class="flex-container">
+						<i class="icon-trend" ng-if="::item.clicks >= item.clicksPreviuos"></i>
+						<i class="icon-trend down" ng-if="::item.clicks < item.clicksPreviuos"></i>
+						<div class="now">{{::item.clicks || 0}}</div>
+					</div>
+				</div>
+
+			</a>
+
+			<div class="postMeta" ng-class="{active: item.showMenu}">
+
+				<div class="details angular-animate">
+
+					<div class="post-menu" ng-if="user && (!user.anonymous || flags.useAnonymousSources)">
+
+						<i class="icon-menu" title="More options" title-top="true" ng-click="item.showMenu = !item.showMenu"></i>
+
+						<ul class="dropdown" ng-if="item.showMenu" click-outside="item.showMenu = false">
+							<li ng-if="!item.nsfw && !item.userNSFW"><a href="" ng-click="::markNSFW(item)">Report NSFW</a></li>
+							<li ng-if="item.userNSFW"><a href="" ng-click="::unmarkNSFW(item)">Mark as SFW</a></li>
+							<li><a href="" ng-click="::markHidden(item)">Hide this from My feed</a></li>
+						</ul>
+					</div>
+
+					<span class="favorite icon-fav" ng-click="::toggleFavorite($event, item)" ng-if="::showFavorite" ng-class="{ active: item.favorite }" title="Save item" title-top="true"></span>
+
+	            </div>
+
+			</div>
+		</div>
+
+	</li>
+</ul>
+
+<div class="placeholder">
+	<h1>The most trendy content right now on Muzli</h1>
+</div>
+
+<div ng-show="feed && !feed.length && !blockEmpty && !isRendering" ng-transclude="no-data">
+</div>
+
+</section>

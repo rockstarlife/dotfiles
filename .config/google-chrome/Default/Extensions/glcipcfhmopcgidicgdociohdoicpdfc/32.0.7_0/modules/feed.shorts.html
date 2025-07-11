@@ -1,0 +1,27 @@
+<div class="shorts-header">
+    <h3>Design shorts</h3>
+    <a ng-click="removeShorts()" title="You can always turn it back on in the Settings">Turn Off Shorts</a>
+</div>
+
+<div class="shorts-container">
+
+    <div class="tile" ng-repeat="item in shorts" ng-if="!item.hidden">
+
+        <a target="_blank" ng-href="{{::item.link_out}}" class="feedLink" ng-click="shortsClick(item, $event)">
+
+            <div class="postPhoto">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAAAAAApWe5zwAAAAF0Uk5TAEDm2GYAAAAMSURBVHjaYmAACDAAAAIAAU9tWeEAAAAASUVORK5CYII="
+                    muzli-lazy="{{::item.image}}" muzli-gif="{{::item.gif}}" muzli-is-gif="{{::item.isGif}}" src="" alt="" />
+                <div class="hover-overlay">
+                    <i class="icon-play"></i>
+                </div>
+            </div>
+
+            <div class="postInfo">
+                <h3 ng-bind="::item.title"></h3>
+            </div>
+        </a>
+
+    </div>
+
+</div>

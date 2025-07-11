@@ -1,0 +1,13 @@
+2025/07/11-03:16:35.218 d24 Reusing MANIFEST /home/Neo/.config/google-chrome/Default/IndexedDB/https_bingx.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/11-03:16:35.218 d24 Recovering log #6
+2025/07/11-03:16:35.219 d24 Reusing old log /home/Neo/.config/google-chrome/Default/IndexedDB/https_bingx.com_0.indexeddb.leveldb/000006.log 
+2025/07/11-03:20:02.184 d35 Level-0 table #11: started
+2025/07/11-03:20:02.205 d35 Level-0 table #11: 52036 bytes OK
+2025/07/11-03:20:02.223 d35 Delete type=0 #6
+2025/07/11-03:20:02.223 d32 Manual compaction at level-0 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/07/11-03:20:04.284 d34 Compacting 1@1 + 1@2 files
+2025/07/11-03:20:04.293 d34 Generated table #12@1: 79 keys, 28930 bytes
+2025/07/11-03:20:04.293 d34 Compacted 1@1 + 1@2 files => 28930 bytes
+2025/07/11-03:20:04.304 d34 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/07/11-03:20:04.304 d34 Delete type=2 #11
+2025/07/11-03:20:04.304 d34 Delete type=2 #8

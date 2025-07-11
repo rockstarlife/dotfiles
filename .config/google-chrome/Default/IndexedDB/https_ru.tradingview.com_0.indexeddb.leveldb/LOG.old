@@ -1,0 +1,7 @@
+2025/07/11-04:56:06.920 351 Reusing MANIFEST /home/Neo/.config/google-chrome/Default/IndexedDB/https_ru.tradingview.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/11-04:56:06.921 351 Recovering log #3
+2025/07/11-04:56:06.926 351 Reusing old log /home/Neo/.config/google-chrome/Default/IndexedDB/https_ru.tradingview.com_0.indexeddb.leveldb/000003.log 
+2025/07/11-05:21:46.922 352 Level-0 table #5: started
+2025/07/11-05:21:46.933 352 Level-0 table #5: 15290 bytes OK
+2025/07/11-05:21:46.944 352 Delete type=0 #3
+2025/07/11-05:21:46.945 352 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

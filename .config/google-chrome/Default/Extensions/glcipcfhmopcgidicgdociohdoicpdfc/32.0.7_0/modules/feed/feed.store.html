@@ -1,0 +1,37 @@
+<div class="feed-container">
+  <div class="feed-title store-title">
+  
+    <div class="flex-title">
+      <h2 ng-cloak ng-if="currentSource.name">
+        <span title="{{currentSource.description}}">{{currentSource.title}}</span>
+      </h2>
+    </div>
+  
+    <nav class="tabs inline">
+      <a href="" ui-sref="store({ filter: '' })" ng-class="{ active: filter === '' }">All assets</a>
+      <a href="" ui-sref="store({ filter: 'templates' })" ng-class="{ active: filter === 'templates' }">Website templates</a>
+      <a href="" ui-sref="store({ filter: 'ui-kits' })" ng-class="{ active: filter === 'ui-kits' }">UI kits</a>
+      <a href="" ui-sref="store({ filter: 'illustrations' })" ng-class="{ active: filter === 'illustrations' }">Illustrations</a>
+      <a href="" ui-sref="store({ filter: 'icons' })" ng-class="{ active: filter === 'icons' }">Icons</a>
+      <a href="" ui-sref="store({ filter: 'fonts' })" ng-class="{ active: filter === 'fonts' }">Fonts</a>
+      <a href="" ui-sref="store({ filter: 'mockups' })" ng-class="{ active: filter === 'mockups' }">Mockups</a>
+    </nav>
+  
+    <div class="shortcuts-toggle" ng-if="currentSource">
+  
+      <p>Pin to Sidebar</p>
+  
+      <label class="switch" ng-click="checkAnonymousSources($event)">
+          <input class="preventBlur" type="checkbox" ng-model="currentSource.isShortcut" ng-change="onToggleSource(currentSource)">
+          <span class="slider"></span>
+      </label>
+    </div>
+  
+  </div>
+  
+  <scrollable-feed items="items" ng-hide="errors.length" sponsored="sponsored" load-on-sort show-favorite>
+    <scrollable-feed-no-data>
+      <div id="oops">No items yet today <a href="" ng-click="::reload()">Try again</a></div>
+    </scrollable-feed-no-data>
+  </scrollable-feed>
+</div>

@@ -1,0 +1,74 @@
+{
+   "action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup/popup.html"
+   },
+   "background": {
+      "service_worker": "background/bg.js"
+   },
+   "commands": {
+      "_execute_action": {
+         "description": "Open the popup",
+         "suggested_key": {
+            "default": "Ctrl+Shift+S",
+            "mac": "Command+Shift+S"
+         }
+      },
+      "down": {
+         "description": "Decrease volume"
+      },
+      "fav": {
+         "description": "Like"
+      },
+      "mute": {
+         "description": "Mute"
+      },
+      "next": {
+         "description": "Play next track"
+      },
+      "open": {
+         "description": "Open the SoundCloud tab"
+      },
+      "prev": {
+         "description": "Play previous track"
+      },
+      "repeat": {
+         "description": "Repeat"
+      },
+      "seekb": {
+         "description": "Seek backward"
+      },
+      "seekf": {
+         "description": "Seek forward"
+      },
+      "shuffle": {
+         "description": "Shuffle"
+      },
+      "toggle": {
+         "description": "Play or pause"
+      },
+      "up": {
+         "description": "Increase volume"
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "jquery-3.7.1.min.js", "contents/contents.js", "contents/utils.js" ],
+      "matches": [ "*://soundcloud.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "SoundCloud Popup Player 🔥",
+   "homepage_url": "https://akiba.cloud/soundcloud-player/",
+   "icons": {
+      "128": "icon.png",
+      "16": "icon.png",
+      "48": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArcKWtrTxM10GHjWw43zzPWH1MNUyaguDBeukCmqw1kCjisOtHFgWzU0U5BfGMN+ipDkrpqEXaWoHJWDhTS5UAaFo7JOMEUwaLml3Wm1Q1cmmsmuJwgFcGeHD7GeHlMyigqSh3kU3pg+QqlWAM5QfUnrB7ShNLATY3pOP1FMpN6zQRtLhqmlFGGFYij99A2HOm85xN3zwIpuREIFC0zB46njiGyzLlc2X3/LFr08CObZNDD/8RusVJyooti5meVgCcuKS+elsd61NynA5/2VtxLurH0OexeVXIojkZ+YxgY0KNhfAPgQ2awk6s3HS6IiEGHRwBAKomHWCO4Y9/aoHNQIDAQAB",
+   "manifest_version": 3,
+   "name": "SoundCloud Player",
+   "permissions": [ "tabs", "clipboardWrite" ],
+   "short_name": "SC Player",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.4.0"
+}

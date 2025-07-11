@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[7915],{792:(e,a,r)=>{r.r(a),r.d(a,{default:()=>n});const n={menu:{options:"Definer Opcje",pdf:"PDF Reader",review:"Zostaw recenzj\u0119",help:"Centrum informacyjne"},prompts:{translator:"T\u0142umacz",dictionary:"S\u0142ownik",ipa:"T\u0142umacz IPA",grammar:"Sprawdzanie Gramatyki"}}}}]);

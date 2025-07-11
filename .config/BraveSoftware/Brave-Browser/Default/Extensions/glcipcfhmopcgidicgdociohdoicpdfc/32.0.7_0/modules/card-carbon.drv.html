@@ -1,0 +1,19 @@
+<div class="tile">
+  <a target="_blank" ng-href="{{::item.link_out}}" class="feedLink" ng-mousedown="::promotionClick(item, $event)">
+    <div class="postPhoto">
+      <img class="bg"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAAAAAApWe5zwAAAAF0Uk5TAEDm2GYAAAAMSURBVHjaYmAACDAAAAIAAU9tWeEAAAAASUVORK5CYII="
+        muzli-lazy="{{::item.image}}" muzli-gif="{{::item.gif}}" muzli-is-gif="{{::item.isGif}}" alt="" />
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAAAAAApWe5zwAAAAF0Uk5TAEDm2GYAAAAMSURBVHjaYmAACDAAAAIAAU9tWeEAAAAASUVORK5CYII="
+        muzli-lazy="{{::item.image}}" muzli-gif="{{::item.gif}}" muzli-is-gif="{{::item.isGif}}" alt="" />
+
+      <img ng-repeat="pixel in item.pixels" ng-src="{{::pixel}}" style="display:none;" height="0" width="0" />
+    </div>
+    <div class="postMeta">
+      <div class="postInfo">
+        <h3 ng-bind="::item.title"></h3>
+      </div>
+    </div>
+  </a>
+</div>

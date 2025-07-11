@@ -1,0 +1,39 @@
+{
+   "action": {
+      "default_icon": {
+         "19": "icon19.png",
+         "38": "icon38.png"
+      },
+      "default_title": "Muzli"
+   },
+   "background": {
+      "service_worker": "js/background.js"
+   },
+   "chrome_url_overrides": {
+      "newtab": "index.html"
+   },
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';"
+   },
+   "description": "Your daily dose of design with industry news, tools, and inspiration - all in one place.",
+   "homepage_url": "http://muz.li?ref=ext",
+   "icons": {
+      "128": "icon128.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtk/x1emMC6EID2eMAOkb0AzcKZe1bY+OvLosqJf4hgGxnV73E+L6m9xFa03Ccr00uaU6gBOyvG3OpNN6OJr7tMEPEfYKOjW2W9cSQJxQ7aEXPC5IvYZjGKjV9tker6TzVRl4vMcn3W7u15S5laK+DupIZL4RbuUe4wYCEcibjPmOgBQFq38YyCoF4/hymLVqeINMCnTy9IHsp+mDRpQClsvna2Z60dJGA0lHKS+wtDKKGruUGZAn+C4NAX+OoyNWht9MSQ0FVqCBOrDoIlmaXvqKreUaj/mRW8amo/ip+bIsFA2Sz98LIRqxORZTcghATlsE6KeQ94sRkDXYpkTPzQIDAQAB",
+   "manifest_version": 3,
+   "name": "Muzli - Design inspiration hub",
+   "optional_permissions": [ "topSites", "bookmarks", "favicon", "search" ],
+   "permissions": [ "storage", "alarms" ],
+   "short_name": "Muzli",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "32.0.7",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "index.html", "slack.html" ]
+   }, {
+      "matches": [ "*://*/*" ],
+      "resources": [ "*/*" ]
+   } ]
+}

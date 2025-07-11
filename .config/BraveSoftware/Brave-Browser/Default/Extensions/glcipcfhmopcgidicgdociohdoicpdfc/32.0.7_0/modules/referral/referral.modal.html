@@ -1,0 +1,73 @@
+<dialog class="referral" click-outside="$state.go('all')">
+
+    <div class="wrapper">
+
+        <style>
+          .advertise {
+            padding: 40px;
+          }
+        </style>
+      
+        <h1>Unlock Ad-Free Muzli</h1>
+      
+        <p>
+            Enjoy a seamless browsing experience by inviting your friends.
+        </p>
+
+        <span class="prop" ng-if="useV4">
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+        </span>
+
+        <ol>
+            <li>Get your unique Muzli invitation link.</li>
+            <li>Share this link with your friends, coworkers or social media.</li>
+            <li>Once 5 friends sign up, say goodbye to ads!</li>
+        </ol>
+        
+        <form ng-if="referralCode">
+            <input type="text" ng-model="referralUrl" name="referralUrl" readonly select-on-click/>  
+            <button ng-class="{success: copySuccess}" click-copy="{{referralUrl}}">{{copySuccess ? 'Link copied to Clipboard' : 'Copy link'}}</button> 
+        </form>
+
+        <p ng-if="referralCode" class="sharers">
+            <span>Or share over:</span>
+            <span class="share facebook icon-facebook" ng-click="::openSharer($event, 'facebook', shareOptions)" title="Share on Facebook" title-dark="true"></span>
+            <span class="share twitter icon-twitter" ng-click="::openSharer($event, 'twitter', shareOptions)" title="Share on Twitter" title-dark="true"></span>
+            <span class="share linkedin icon-linkedin" ng-click="::openSharer($event, 'linkedin', shareOptions)" title="Share on LinkedIn" title-dark="true"></span>
+            <span class="share slack icon-slack" ng-click="::sendSlack($event, shareOptions)" title="Share on Slack" title-dark="true"></span>
+        </p>
+
+        <div ng-if="!referralCode" class="cta">
+          <button ng-click="generateReferralCode()" ng-if="!user.anonymous">Get your referral link</button>
+          <button ng-click="$state.go('sign-in')" ng-if="user.anonymous">Sign In to Continue</button>
+        </div>
+      
+      </div>
+
+      <div ng-if="referralCode" class="wrapper">
+
+        <div class="progress">
+            <div class="ticks">
+                <div ng-repeat="user in referredUsers track by $index" class="tick" ng-class="{active: !!user.id}">
+                  <img ng-if="user.photo && !user.monogram" src="{{user.photo}}" alt="{{user.displayName}}" title="{{user.displayName}}" title-top="true" title-dark="true" use-monogram="user">
+                  <span ng-if="user.monogram" class="mono" title="{{user.displayName}}" title-top="true" title-dark="true">{{user.monogram}}</span>
+                  <i ng-if="$index === targetUserCount - 1 && !user.id" class="icon-star"></i>
+                </div>
+            </div>
+            <span>{{currentUserCount}} of {{targetUserCount}} signed up</span>
+        </div>
+        
+        <div class="cta">
+          <button ng-disabled="currentUserCount < targetUserCount" ng-click="removeAds()">
+            <i class="icon-lock" ng-if="currentUserCount < targetUserCount"></i> Remove All Ads
+          </button>
+        </div>
+
+      </div>
+
+</dialog>
+

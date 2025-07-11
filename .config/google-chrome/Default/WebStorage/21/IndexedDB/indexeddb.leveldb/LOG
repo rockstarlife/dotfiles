@@ -1,0 +1,6 @@
+2025/07/10-22:04:05.766 2a7 Creating DB /home/Neo/.config/google-chrome/Default/WebStorage/21/IndexedDB/indexeddb.leveldb since it was missing.
+2025/07/10-22:04:05.791 2a7 Reusing MANIFEST /home/Neo/.config/google-chrome/Default/WebStorage/21/IndexedDB/indexeddb.leveldb/MANIFEST-000001
+2025/07/10-22:04:12.107 2a8 Level-0 table #5: started
+2025/07/10-22:04:12.116 2a8 Level-0 table #5: 1200 bytes OK
+2025/07/10-22:04:12.131 2a8 Delete type=0 #3
+2025/07/10-22:04:12.131 2a8 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

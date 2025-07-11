@@ -1,0 +1,28 @@
+<div class="tile" didna-iframe>
+    <a target='_blank' class="feedLink" ng-class="{'no-backfill': !showBackfill}" ng-click="showBackfill ? promotionClick() : null">
+        <div class="postPhoto" ng-class="{didna: !showBackfill}">
+            <iframe ng-src="{{didnaUrl}}" id="{{row}}" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting"></iframe>
+            <ng-container ng-if="showBackfill">
+                <img ng-if="!backfill.image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAAAAAApWe5zwAAAAF0Uk5TAEDm2GYAAAAMSURBVHjaYmAACDAAAAIAAU9tWeEAAAAASUVORK5CYII=" alt=""/>
+                <img ng-if="backfill.image" ng-src="{{::backfill.image}}" alt=""/>
+                <img class="beacon" style="visibility: hidden;" ng-src="{{backfill.beacon}}" ng-if="showPixel" alt=""/>
+            </ng-container>
+            <img class="beacon" style="visibility: hidden;" ng-src="{{beacon}}" ng-if="showPixel" alt=""/>
+        </div>
+        <div class="postInfo" ng-if="showBackfill">
+            <h3>{{::backfill.name}}</h3>
+        </div>
+    </a>
+    <div class="postMeta">
+        <div class="details angular-animate">
+            <div class="post-menu">
+                <i class="icon-menu" title="More options" title-top="true" ng-click="item.showMenu = !item.showMenu"></i>
+                <ul class="dropdown" ng-if="item.showMenu" click-outside="item.showMenu = false">
+                    <li><a href="" ng-click="vm.showAdsDialog = true; item.showMenu = false;">Why I'm seeing Ads?</a></li>
+                    <li><a href="" ui-sref="all.referral" ng-click="item.showMenu = false">Hide all Ads on Muzli</a></li>
+                </ul>
+            </div>
+            <h4>PROMOTED</h4>
+        </div>
+    </div>
+</div>

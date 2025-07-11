@@ -1,0 +1,70 @@
+<div class="container" ng-class="{ disabled: user.anonymous && !flags.useAnonymousSources }">
+
+  <div class="sourceSearch" ng-hide="sourcesDragged">
+    <div class="searchContainer">
+      <input type="text" ng-model="searchSources" ng-model-options="{ debounce: 150 }" placeholder="Search for sources">
+    </div>
+  </div>
+
+  <div class="controls" ng-if="!user.anonymous || flags.useAnonymousSources">
+    <p>{{user.shortcuts.length}} sources selected</p>
+    <a href="" ng-click="clearShortcuts($event)" ng-if="!clearedShortcuts.length && user.shortcuts.length">Clear all</a>
+    <a href="" ng-click="restoreShortcuts($event)" ng-if="clearedShortcuts.length">Undo</a>
+  </div>
+
+  <div class="anonymous" ng-if="user.anonymous && !flags.useAnonymousSources">
+    <p><a ui-sref="sign-in">Sign in</a> to save your preferences</p>
+  </div>
+
+  <ul class="sources" ui-sortable="sideBarSortableOptions" ng-model="sources">
+
+    <li ng-repeat="source in sources | sourcesFilter:searchSources as filteredSources track by source.name"
+      data-source="{{::source.name}}" ng-class="{
+        enabled: source.isShortcut,
+        demoted: source.isDemoted,
+        active: (currentSource && source.name === currentSource.name)
+      }">
+
+      <i class="icon-menu" ng-if="!source.static"></i>
+
+      <i href="" class="source" ng-style="::{'background-image': 'url({{source.icon}})'}"></i>
+
+      <span class="title" ng-click="clickSidebarSource(source, $event)">
+        {{::source.title}}{{ source.isDemoted ? ' (hidden)' : '' }}
+        <a ng-if="::source.url" ng-href="{{muzliShareEndpoint}}go?link=http://{{::source.url}}/" target="_blank"
+          ng-click="events.sidebar.clickLink(source.name, $event)" title="Go to {{::source.title}}'s website">
+          <i class="icon-link"></i>
+        </a>
+
+      </span>
+
+      <i class="icon-demoted" ng-class="{
+          'icon-hide': source.isDemoted,
+          'icon-view': !source.isDemoted,
+        }" ng-click="toggleSourceDemotion(source)" title="Show in Highlights"></i>
+
+      <label class="switch elevated" ng-click="checkAnonymousSources()" ng-if="!source.static">
+        <input type="checkbox" ng-model="source.isShortcut" ng-change="onToggleSource(source)"
+          ng-disabled="user.anonymous && !flags.useAnonymousSources">
+        <span class="slider"></span>
+      </label>
+
+    </li>
+
+  </ul>
+
+</div>
+
+<div class="overlay" ng-click="::toggleSidebar()" ng-if="vm.showFtx !== 'sidebar' || !flags.useAnonymousSources">
+
+  <div class="content" ng-if="vm.showFtx !== 'sidebar'" ng-cloak>
+    <h2>Customize your shortcuts and content preferences.</h2>
+    <p>We do our best to show content that may interest you on the Highlights feed automatically. However, if you turn
+      on a shortcut, we give that feed a small boost.</p>
+    <p>You can always hide any unwanted content from your feed by clicking on <i class="icon-view"></i> icon while
+      hovering.</p>
+  </div>
+
+</div>
+
+<div class="overlay" ng-if="vm.showFtx === 'sidebar' && flags.useAnonymousSources"></div>
