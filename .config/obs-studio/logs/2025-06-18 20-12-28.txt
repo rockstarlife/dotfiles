@@ -1,0 +1,235 @@
+20:12:28.520: Platform: Wayland
+20:12:28.520: CPU Name: Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz
+20:12:28.520: CPU Speed: 2700.638MHz
+20:12:28.520: Physical Cores: 2, Logical Cores: 4
+20:12:28.520: Physical Memory: 7838MB Total, 3275MB Free
+20:12:28.520: Kernel Version: Linux 6.15.2-arch1-1
+20:12:28.520: Distribution: "Arch Linux" Unknown
+20:12:28.520: Desktop Environment: Hyprland (Hyprland)
+20:12:28.520: Session Type: wayland
+20:12:28.523: Qt Version: 6.9.1 (runtime), 6.9.0 (compiled)
+20:12:28.523: Portable mode: false
+20:12:28.594: OBS 31.0.3 (linux)
+20:12:28.594: ---------------------------------
+20:12:28.595: ---------------------------------
+20:12:28.595: audio settings reset:
+20:12:28.595: 	samples per sec: 48000
+20:12:28.595: 	speakers:        2
+20:12:28.595: 	max buffering:   960 milliseconds
+20:12:28.595: 	buffering type:  dynamically increasing
+20:12:28.598: ---------------------------------
+20:12:28.598: Initializing OpenGL...
+20:12:28.598: Using EGL/Wayland
+20:12:28.678: Initialized EGL 1.5
+20:12:28.710: Loading up OpenGL on adapter Intel Mesa Intel(R) HD Graphics 6000 (BDW GT3)
+20:12:28.710: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 25.1.3-arch1.3, shading language 4.60
+20:12:28.764: ---------------------------------
+20:12:28.764: video settings reset:
+20:12:28.764: 	base resolution:   1920x1080
+20:12:28.764: 	output resolution: 1280x720
+20:12:28.764: 	downscale filter:  Bicubic
+20:12:28.764: 	fps:               30/1
+20:12:28.764: 	format:            NV12
+20:12:28.764: 	YUV mode:          Rec. 709/Partial
+20:12:28.764: NV12 texture support enabled
+20:12:28.764: P010 texture support not available
+20:12:28.776: Audio monitoring device:
+20:12:28.776: 	name: Default
+20:12:28.776: 	id: default
+20:12:28.777: ---------------------------------
+20:12:28.791: Failed to load 'en-US' text for module: 'decklink-captions.so'
+20:12:28.802: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+20:12:28.813: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+20:12:28.814: Failed to initialize module 'decklink.so'
+20:12:29.091: [pipewire] Available capture sources:
+20:12:29.091: [pipewire]     - Monitor source
+20:12:29.091: [pipewire]     - Window source
+20:12:29.124: v4l2loopback not installed, virtual camera not registered
+20:12:29.244: VAAPI: API version 1.22
+20:12:29.244: FFmpeg VAAPI H264 encoding supported
+20:12:29.245: FFmpeg VAAPI AV1 encoding not supported
+20:12:29.247: FFmpeg VAAPI HEVC encoding not supported
+20:12:29.279: os_dlopen(libnvidia-encode.so.1->libnvidia-encode.so.1): libnvidia-encode.so.1: cannot open shared object file: No such file or directory
+20:12:29.279: 
+20:12:29.280: NVENC not supported
+20:12:29.280: Failed to initialize module 'obs-nvenc.so'
+20:12:29.373: os_dlopen(/usr/lib/obs-plugins/obs-websocket.so->/usr/lib/obs-plugins/obs-websocket.so): libqrcodegencpp.so.1: cannot open shared object file: No such file or directory
+20:12:29.373: 
+20:12:29.377: os_dlopen(/usr/lib/obs-plugins/obs-websocket.so->/usr/lib/obs-plugins/obs-websocket.so): libqrcodegencpp.so.1: cannot open shared object file: No such file or directory
+20:12:29.377: 
+20:12:29.377: Module '/usr/lib/obs-plugins/obs-websocket.so' not loaded
+20:12:29.412: ---------------------------------
+20:12:29.412:   Loaded Modules:
+20:12:29.412:     text-freetype2.so
+20:12:29.412:     rtmp-services.so
+20:12:29.412:     obs-x264.so
+20:12:29.412:     obs-webrtc.so
+20:12:29.412:     obs-vst.so
+20:12:29.412:     obs-transitions.so
+20:12:29.412:     obs-qsv11.so
+20:12:29.412:     obs-outputs.so
+20:12:29.412:     obs-libfdk.so
+20:12:29.412:     obs-filters.so
+20:12:29.412:     obs-ffmpeg.so
+20:12:29.412:     linux-v4l2.so
+20:12:29.412:     linux-pulseaudio.so
+20:12:29.412:     linux-pipewire.so
+20:12:29.412:     linux-jack.so
+20:12:29.412:     linux-capture.so
+20:12:29.412:     linux-alsa.so
+20:12:29.412:     image-source.so
+20:12:29.412:     frontend-tools.so
+20:12:29.412:     decklink-output-ui.so
+20:12:29.412:     decklink-captions.so
+20:12:29.412: ---------------------------------
+20:12:29.412: ---------------------------------
+20:12:29.412: Available Encoders:
+20:12:29.412:   Video Encoders:
+20:12:29.412: 	- ffmpeg_svt_av1 (SVT-AV1)
+20:12:29.412: 	- ffmpeg_aom_av1 (AOM AV1)
+20:12:29.412: 	- ffmpeg_vaapi_tex (FFmpeg VAAPI H.264)
+20:12:29.412: 	- obs_qsv11_v2 (QuickSync H.264)
+20:12:29.412: 	- obs_x264 (x264)
+20:12:29.412:   Audio Encoders:
+20:12:29.412: 	- ffmpeg_aac (FFmpeg AAC)
+20:12:29.412: 	- ffmpeg_opus (FFmpeg Opus)
+20:12:29.412: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+20:12:29.412: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+20:12:29.412: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+20:12:29.412: 	- ffmpeg_alac (FFmpeg ALAC (24-bit))
+20:12:29.412: 	- ffmpeg_flac (FFmpeg FLAC (16-bit))
+20:12:29.412: 	- libfdk_aac (libfdk AAC)
+20:12:29.412: ==== Startup complete ===============================================
+20:12:29.454: All scene data cleared
+20:12:29.454: ------------------------------------------------
+20:12:29.460: pulse-input: Server name: 'PulseAudio (on PipeWire 1.4.5) 15.0.0'
+20:12:29.460: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+20:12:29.460: pulse-input: Started recording from 'bluez_output.E8_EE_CC_F7_AF_26.1.monitor' (default)
+20:12:29.460: [Loaded global audio device]: 'Desktop Audio'
+20:12:29.461: pulse-input: Server name: 'PulseAudio (on PipeWire 1.4.5) 15.0.0'
+20:12:29.461: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+20:12:29.461: pulse-input: Started recording from 'alsa_input.pci-0000_00_1b.0.analog-stereo' (default)
+20:12:29.461: [Loaded global audio device]: 'Mic/Aux'
+20:12:29.464: Switched to scene 'Scene 2'
+20:12:29.464: ------------------------------------------------
+20:12:29.464: Loaded scenes:
+20:12:29.464: - scene 'Scene':
+20:12:29.464: - scene 'Scene 2':
+20:12:29.464: ------------------------------------------------
+20:12:30.046: adding 42 milliseconds of audio buffering, total audio buffering is now 42 milliseconds (source: Desktop Audio)
+20:12:30.046: 
+20:12:35.301: User switched to scene 'Scene'
+20:12:35.302: User Removed scene 'Scene 2'
+20:12:37.489: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Try to disable surface 0x5636cada2a90 with focusing surface 0x5636cb0318e0
+20:12:38.299: User added scene 'Scene 2'
+20:12:38.301: User switched to scene 'Scene 2'
+20:12:39.009: User switched to scene 'Scene'
+20:12:39.489: User switched to scene 'Scene 2'
+20:12:39.970: User switched to scene 'Scene'
+20:12:40.332: User switched to scene 'Scene 2'
+20:13:00.022: Creating a popup with a parent, QWidgetWindow(0x5636c929c0d0, name="OBSBasicWindow") which does not match the current topmost grabbing popup, QWidgetWindow(0x5636cb7d4650, name="QMenuClassWindow") With some shell surface protocols, this is not allowed. The wayland QPA plugin is currently handling it by setting the parent to the topmost grabbing popup. Note, however, that this may cause positioning errors and popups closing unxpectedly. Please fix the transient parent of the popup.
+20:13:23.357: This plugin supports grabbing the mouse only for popup windows
+20:13:23.567: This plugin supports grabbing the mouse only for popup windows
+20:13:27.981: This plugin supports grabbing the mouse only for popup windows
+20:13:28.189: This plugin supports grabbing the mouse only for popup windows
+20:13:29.858: This plugin supports grabbing the mouse only for popup windows
+20:13:30.067: This plugin supports grabbing the mouse only for popup windows
+20:13:31.799: Creating a popup with a parent, QWidgetWindow(0x5636c929c0d0, name="OBSBasicWindow") which does not match the current topmost grabbing popup, QWidgetWindow(0x5636cb0790d0, name="QMenuClassWindow") With some shell surface protocols, this is not allowed. The wayland QPA plugin is currently handling it by setting the parent to the topmost grabbing popup. Note, however, that this may cause positioning errors and popups closing unxpectedly. Please fix the transient parent of the popup.
+20:13:44.406: PipeWire initialized
+20:13:44.417: User added source 'Screen Capture (PipeWire)' (pipewire-screen-capture-source) to scene 'Scene 2'
+20:13:44.431: [pipewire] Screencast session created
+20:13:44.470: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Try to disable surface 0x5636cb1a8ca0 with focusing surface 0x5636cada2a90
+20:13:50.037: [pipewire] Asking for monitor and window
+20:13:50.075: [pipewire] source selected, setting up screencast
+20:13:50.096: [pipewire] Server version: 1.4.5
+20:13:50.096: [pipewire] Library version: 1.4.5
+20:13:50.096: [pipewire] Header version: 1.4.2
+20:13:50.097: [pipewire] Created stream 0x5636cb137ac0
+20:13:50.097: [pipewire] Stream 0x5636cb137ac0 state: "connecting" (error: none)
+20:13:50.098: [pipewire] Playing stream 0x5636cb137ac0
+20:13:50.100: [pipewire] Stream 0x5636cb137ac0 state: "paused" (error: none)
+20:13:50.138: [pipewire] Negotiated format:
+20:13:50.138: [pipewire]     Format: 8 (Spa:Enum:VideoFormat:BGRx)
+20:13:50.139: [pipewire]     Modifier: 0x0
+20:13:50.139: [pipewire]     Size: 1920x1080
+20:13:50.139: [pipewire]     Framerate: 0/1
+20:13:50.144: [pipewire] Negotiated format:
+20:13:50.144: [pipewire]     Format: 8 (Spa:Enum:VideoFormat:BGRx)
+20:13:50.144: [pipewire]     Modifier: 0x100000000000002
+20:13:50.144: [pipewire]     Size: 1920x1080
+20:13:50.144: [pipewire]     Framerate: 0/1
+20:13:50.160: [pipewire] Stream 0x5636cb137ac0 state: "streaming" (error: none)
+20:13:51.098: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Try to disable surface 0x5636cb1a8ca0 with focusing surface 0x5636cada2a90
+20:13:51.509: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Try to disable surface 0x5636cb1a9b60 with focusing surface 0x5636cada2a90
+20:13:53.137: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Try to disable surface 0x5636cb1a8ca0 with focusing surface 0x5636cada2a90
+20:14:12.108: >>> new qsv encoder
+20:14:12.108: [qsv encoder: 'simple_video_recording'] settings:
+20:14:12.108: 	codec:          H.264
+20:14:12.108: 	rate_control:   ICQ
+20:14:12.108: 	ICQ Quality:    21
+20:14:12.108: 	target_usage:   TU4
+20:14:12.108: 	profile:        high
+20:14:12.108: 	keyint:         0
+20:14:12.108: 	latency:        normal
+20:14:12.108: 	b-frames:       3
+20:14:12.108: 	fps_num:        30
+20:14:12.108: 	fps_den:        1
+20:14:12.108: 	width:          1280
+20:14:12.108: 	height:         720
+20:14:12.108: [qsv encoder: 'simple_video_recording'] debug info:
+20:14:12.122: Failed to initialize MFX
+20:14:12.122: [qsv encoder: 'msdk_impl'] Specified object/item/sync point not found. (MFX_ERR_NOT_FOUND)
+20:14:12.122: [qsv encoder: 'simple_video_recording'] qsv failed to load
+20:14:12.122: 	major:          1
+20:14:12.122: 	minor:          0
+20:14:31.070: >>> new qsv encoder
+20:14:31.070: [qsv encoder: 'simple_video_recording'] settings:
+20:14:31.070: 	codec:          H.264
+20:14:31.070: 	rate_control:   ICQ
+20:14:31.070: 	ICQ Quality:    21
+20:14:31.070: 	target_usage:   TU4
+20:14:31.070: 	profile:        high
+20:14:31.070: 	keyint:         0
+20:14:31.070: 	latency:        normal
+20:14:31.070: 	b-frames:       3
+20:14:31.070: 	fps_num:        30
+20:14:31.070: 	fps_den:        1
+20:14:31.070: 	width:          1280
+20:14:31.070: 	height:         720
+20:14:31.070: [qsv encoder: 'simple_video_recording'] debug info:
+20:14:31.087: Failed to initialize MFX
+20:14:31.087: [qsv encoder: 'msdk_impl'] Specified object/item/sync point not found. (MFX_ERR_NOT_FOUND)
+20:14:31.087: [qsv encoder: 'simple_video_recording'] qsv failed to load
+20:14:31.087: 	major:          1
+20:14:31.087: 	minor:          0
+20:23:41.303: Get on org.freedesktop.portal.Settings returned an invalid reply
+20:23:41.303: Get on org.freedesktop.portal.Settings returned an invalid reply
+20:27:13.722: >>> new qsv encoder
+20:27:13.723: [qsv encoder: 'simple_video_recording'] settings:
+20:27:13.723: 	codec:          H.264
+20:27:13.723: 	rate_control:   ICQ
+20:27:13.723: 	ICQ Quality:    21
+20:27:13.723: 	target_usage:   TU4
+20:27:13.723: 	profile:        high
+20:27:13.723: 	keyint:         0
+20:27:13.723: 	latency:        normal
+20:27:13.723: 	b-frames:       3
+20:27:13.723: 	fps_num:        30
+20:27:13.723: 	fps_den:        1
+20:27:13.723: 	width:          1280
+20:27:13.723: 	height:         720
+20:27:13.723: [qsv encoder: 'simple_video_recording'] debug info:
+20:27:13.735: Failed to initialize MFX
+20:27:13.735: [qsv encoder: 'msdk_impl'] Specified object/item/sync point not found. (MFX_ERR_NOT_FOUND)
+20:27:13.736: [qsv encoder: 'simple_video_recording'] qsv failed to load
+20:27:13.736: 	major:          1
+20:27:13.736: 	minor:          0
+20:27:18.401: ==== Shutting down ==================================================
+20:27:18.410: pulse-input: Stopped recording from 'bluez_output.E8_EE_CC_F7_AF_26.1.monitor'
+20:27:18.410: pulse-input: Got 35556 packets with 42667200 frames
+20:27:18.410: pulse-input: Stopped recording from 'alsa_input.pci-0000_00_1b.0.analog-stereo'
+20:27:18.410: pulse-input: Got 35555 packets with 42666000 frames
+20:27:18.411: [pipewire] Stream 0x5636cb137ac0 state: "paused" (error: none)
+20:27:18.412: [pipewire] Stream 0x5636cb137ac0 state: "unconnected" (error: none)
+20:27:18.456: All scene data cleared
+20:27:18.456: ------------------------------------------------

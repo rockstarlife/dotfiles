@@ -1,0 +1,39 @@
+<div class="blocker shorts">
+
+    <i class="icon-muzlitv"></i>
+
+    <a ng-click="closeVideoPreview($event)" class="close">
+        <i class="icon-close"></i>
+    </a>
+
+    <div class="flex-container {{videoType}}">
+
+        <div class="frame" ng-if="!shorts.length">
+            <div class="iframe-placeholder">
+                <div class="preloader-wrapper active" ng-if="!item.renderIframe">
+                    <div class="spinner-layer" [ngStyle]="{'border-color': color}">
+                        <div class="circle-clipper left">
+                        <div class="circle"></div>
+                        </div><div class="gap-patch">
+                        <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div ng-repeat="item in shorts" class="frame">
+            <iframe id="{{item.youtube}}" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" webkitallowfullscreen=""
+                mozallowfullscreen="" ng-src="{{::item.embedUrl}}" 
+                iframe-onload="registerLoad($index, item)"
+                ng-if="item.renderIframe"
+                click-outside="closeVideoPreview()"
+            ></iframe>
+            <div class="iframe-placeholder">
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		html,
+		body,
+		iframe {
+			margin: 0;
+			border: 0;
+			padding: 0;
+			display: block;
+			border: none;
+			width: 100%;
+			height: 100%;
+			background: var(--v-ground-base, black);
+		}
+
+		html::-webkit-scrollbar, body::-webkit-scrollbar { width: 14px; height: 14px; }
+		html::-webkit-scrollbar-corner, body::-webkit-scrollbar-corner { background-color: var(--v-secondary-base); }
+		html::-webkit-scrollbar-track, body::-webkit-scrollbar-track { background: var(--v-secondary-base); }
+		html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb { background: var(--v-secondary-darken1); }
+		html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover { background: var(--v-secondary-darken2); }
+		html::-webkit-scrollbar-thumb:active, body::-webkit-scrollbar-thumb:active { background: var(--v-secondary-darken3); }
+
+		.ygContainer,
+		.ygProgress {
+			color: var(--v-text-base, white) !important;
+			background: var(--v-ground-base, black) !important;
+			border: none !important;
+		}
+		.ygProgress {
+			display: none !important;
+		}
+		.ygPanel {
+			display: block !important;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="widget-1"></div>
+
+		<script src="index.js"></script>
+		<script src="widget.js"></script>
+	</body>
+</html>

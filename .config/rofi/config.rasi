@@ -1,0 +1,7 @@
+configuration {
+    modi: "drun,run,window";
+    font: "monospace 16";
+    show-icons: true;
+    icon-theme: "Papirus";
+}
+@theme "~/.local/share/rofi/themes/default/config.rasi"

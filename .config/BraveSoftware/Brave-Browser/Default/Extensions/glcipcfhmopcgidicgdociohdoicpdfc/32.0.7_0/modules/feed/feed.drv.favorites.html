@@ -1,0 +1,372 @@
+<section id="feed" class="palettes"><!-- Feed posts -->
+
+<ul
+	infinite-scroll='::loadMore()'
+	infinite-scroll-distance='::infiniteScrollDistance'
+	infinite-scroll-immediate-check='false'
+	infinite-scroll-disabled='!feed.length'>
+
+	<li ng-repeat="item in feed track by (item.id || item.link)"
+		ng-class="::{
+			article: item.source.article && !item.video,
+			viral: !!item.viralTimes,
+			animated: item.animated || item.webm,
+			'inline-video': !!item.htmlVideo,
+			video: !!item.video,
+			playing: item.playing,
+			vlog: !!item.sub_source,
+			nsfw: !!item.nsfw || !!item.userNSFW,
+			fallbackImage: item.fallbackImage,
+			showSharePromo: item.displaySharePromo,
+			showMenu: item.showMenu,
+			curated: item.isCurated,
+		}"
+		class="angular-animate"
+		data-muzli-id="{{::item.id}}">
+
+		<ng-container ng-switch="::item.source.name">
+		
+			<!-- Color items -->
+			<div class="tile color" ng-switch-when="colors">
+
+				<div class="feedLink">
+
+					<span class="icon-image" ng-if="item.image" ng-click="item.showPhoto = !item.showPhoto"></span>
+
+					<div class="postPhoto">
+						<div class="palette" style="background: {{item.palette[item.palette.length - 1]}}" ng-class="{hidden: item.showPhoto}">
+							<span ng-repeat="color in item.palette track by $index"
+								style="background: {{color}}"
+								title-top="true"
+								click-copy-color="{{::color}}"
+								brightness="{{::color}}"
+								prevent-click>
+								{{color}}
+							</span>
+						</div>
+						<a class="wrapper" ng-mousedown="::postClick(item, $event)" target="_blank" ng-href="{{::item.link_out}}">
+							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAAAAAApWe5zwAAAAF0Uk5TAEDm2GYAAAAMSURBVHjaYmAACDAAAAIAAU9tWeEAAAAASUVORK5CYII=" muzli-lazy="{{::item.image}}" muzli-gif="{{::item.gif}}" muzli-is-gif="{{::item.isGif}}" src="" alt="" />
+						</a>
+					</div>
+
+					<div class="postInfo">
+						<div class="download" title="Download palette (SVG)" ng-click="downloadSVG(item, $event)"><i class="icon-download"></i> Download</div>
+					</div>
+
+				</div>
+
+				<div class="postMeta">
+
+					<div class="details angular-animate">
+
+						<span class="favorite icon-fav" ng-click="::toggleFavorite($event, item)" ng-if="::showFavorite" ng-class="{ active: item.favorite }" title="Save item" title-top="true"></span>
+
+						<div class="post-menu" ng-if="user && (!user.anonymous || flags.useAnonymousSources)">
+
+							<i class="icon-menu" title="More options" title-top="true" ng-click="item.showMenu = !item.showMenu"></i>
+
+							<ul class="dropdown" ng-if="item.showMenu" click-outside="item.showMenu = false">
+								<li ng-if="!item.nsfw && !item.userNSFW"><a href="" ng-click="::markNSFW(item)">Report NSFW</a></li>
+								<li ng-if="item.userNSFW"><a href="" ng-click="::unmarkNSFW(item)">Mark as SFW</a></li>
+								<li><a href="" ng-click="::markHidden(item)">Hide this from My feed</a></li>
+								<li><a href="" ng-click="::demoteSource(item.source)">Hide all content from <strong>{{::item.source.title}}</strong></a></li>
+								<li><a href="" ng-click="::removeFavorite($event, $index, item)"><i class="icon-bin"></i> Remove from saved</a></li>
+							</ul>
+						</div>
+
+						<div class="stats pull-right">
+							<span title="Votes" title-top="true" ng-if="::item.source.name === 'producthunt'">
+								<span class="icon-ph"></span>
+								<span>{{::item.stats.likes || 0 | thousandSuffix:1}}</span>
+							</span>
+							<span title="Clicks" title-top="true" ng-if="::item.clicks > 0">
+								<span class="icon-click"></span>
+								<span>{{::item.clicks || 0 | thousandSuffix:1}}</span>
+							</span>
+							<span title="Shares" title-top="true">
+								<span class="icon-share-lite"></span>
+								<span>{{::item.virality || 0 | thousandSuffix:1}}</span>
+							</span>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Jobs items -->
+			<div class="tile jobs-tile" ng-switch-when="jobs">
+
+				<a target="_blank" ng-href="{{::item.link_out}}" class="feedLink" ng-mousedown="::postClick(item, $event)">
+
+					<div class="postPhoto" >
+
+						<div class="job-thumbnail">
+							<div class="company">
+								<img ng-if="::item.image" hide-on-error ng-src="{{::item.image}}" />
+								<div ng-if="::!item.image" class="logo-placeholder">{{item.company[0]}}</div>
+								<h4>{{item.company}}</h4>
+							</div>
+							<h3 ng-bind="::item.title"></h3>
+						</div>
+
+						<div class="share">
+							<span class="facebook icon-facebook" ng-click="::openSharer($event, 'facebook', item)" title="Share on Facebook" title-top="true"></span>
+							<span class="twitter icon-twitter" ng-click="::openSharer($event, 'twitter', item)" title="Share on Twitter" title-top="true"></span>
+							<span class="linkedin icon-linkedin" ng-click="::openSharer($event, 'linkedin', item)" title="Share on LinkedIn" title-top="true"></span>
+							<span class="slack icon-slack" ng-click="::sendSlack($event, item)" title="Share on Slack" title-bottom="true"></span>
+						</div>
+
+						<div class="share-promo" ng-if="item.displaySharePromo">
+							<div class="sharers">
+								<h4>Nice! Maybe your friends<br>will also enjoy this?</h4>
+								<span class="facebook icon-facebook" ng-click="::openSharer($event, 'facebook', item)" title="Share on Facebook"></span>
+								<span class="twitter icon-twitter" ng-click="::openSharer($event, 'twitter', item)" title="Share on Twitter"></span>
+								<span class="linkedin icon-linkedin" ng-click="::openSharer($event, 'linkedin', item)" title="Share on LinkedIn"></span>
+								<span class="slack icon-slack" ng-click="::sendSlack($event, item)" title="Share on Slack"></span>
+							</div>
+						</div>
+
+						<span class="badge"></span>
+
+					</div>
+
+					<div class="postInfo">
+						<div class="job-info">
+							<span>{{::item.type}}</span>
+							<br/>
+							<span>{{::item.location}}</span>
+						</div>
+					</div>
+				</a>
+
+				<div class="postMeta">
+
+					<div class="details angular-animate">
+
+						<span class="favorite icon-fav" ng-click="::toggleFavorite($event, item)" ng-if="::showFavorite" ng-class="{ active: item.favorite }" title="Save item" title-top="true"></span>
+
+						<div class="post-menu" ng-if="user && (!user.anonymous || flags.useAnonymousSources)">
+
+							<i class="icon-menu" title="More options" title-top="true" ng-click="item.showMenu = !item.showMenu"></i>
+
+							<ul class="dropdown" ng-if="item.showMenu" click-outside="item.showMenu = false">
+								<li ng-if="!item.nsfw && !item.userNSFW"><a href="" ng-click="::markNSFW(item)">Report NSFW</a></li>
+								<li ng-if="item.userNSFW"><a href="" ng-click="::unmarkNSFW(item)">Mark as SFW</a></li>
+								<li><a href="" ng-click="::markHidden(item)">Hide this from My feed</a></li>
+								<li><a href="" ng-click="::demoteSource(item.source)">Hide all content from <strong>{{::item.source.title}}</strong></a></li>
+								<li><a href="" ng-click="::removeFavorite($event, $index, item)"><i class="icon-bin"></i> Remove from saved</a></li>
+							</ul>
+						</div>
+
+						<div class="stats pull-right">
+							<span title="Votes" title-top="true" ng-if="::item.source.name === 'producthunt'">
+								<span class="icon-ph"></span>
+								<span>{{::item.stats.likes || 0 | thousandSuffix:1}}</span>
+							</span>
+							<span title="Clicks" title-top="true" ng-if="::item.clicks > 0">
+								<span class="icon-click"></span>
+								<span>{{::item.clicks || 0 | thousandSuffix:1}}</span>
+							</span>
+							<span title="Shares" title-top="true">
+								<span class="icon-share-lite"></span>
+								<span>{{::item.virality || 0 | thousandSuffix:1}}</span>
+							</span>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Simple items -->
+			<div class="tile" ng-switch-default>
+
+				<a target="_blank" ng-href="{{::item.link_out}}" class="feedLink" ng-mousedown="::postClick(item, $event)">
+
+					<div class="postPhoto" >
+
+						<i ng-if="item.nsfw || item.userNSFW">NSFW</i>
+
+						<img ng-if="::!item.video" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAAAAAApWe5zwAAAAF0Uk5TAEDm2GYAAAAMSURBVHjaYmAACDAAAAIAAU9tWeEAAAAASUVORK5CYII=" muzli-lazy="{{::item.image}}" muzli-gif="{{::item.gif}}" muzli-is-gif="{{::item.isGif}}" src="" alt="" />
+
+						<video ng-if="::item.htmlVideo" ng-src="{{::item.htmlVideo}}" video-loader playsinline autoplay loop muted></video>
+
+						<muzli-video ng-if="::item.video" ng-click="::videoClick(item, $event)"></muzli-video>
+
+						<div class="share">
+							<span class="facebook icon-facebook" ng-click="::openSharer($event, 'facebook', item)" title="Share on Facebook" title-top="true"></span>
+							<span class="twitter icon-twitter" ng-click="::openSharer($event, 'twitter', item)" title="Share on Twitter" title-top="true"></span>
+							<span class="linkedin icon-linkedin" ng-click="::openSharer($event, 'linkedin', item)" title="Share on LinkedIn" title-top="true"></span>
+							<span class="slack icon-slack" ng-click="::sendSlack($event, item)" title="Share on Slack" title-bottom="true"></span>
+						</div>
+
+						<div class="share-promo" ng-if="item.displaySharePromo">
+							<div class="sharers">
+								<h4>Nice! Maybe your friends<br>will also enjoy this?</h4>
+								<span class="facebook icon-facebook" ng-click="::openSharer($event, 'facebook', item)" title="Share on Facebook"></span>
+								<span class="twitter icon-twitter" ng-click="::openSharer($event, 'twitter', item)" title="Share on Twitter"></span>
+								<span class="linkedin icon-linkedin" ng-click="::openSharer($event, 'linkedin', item)" title="Share on LinkedIn"></span>
+								<span class="slack icon-slack" ng-click="::sendSlack($event, item)" title="Share on Slack"></span>
+							</div>
+						</div>
+
+						<span class="badge"></span>
+
+					</div>
+					
+					<!-- V3 -->
+					<div class="postInfo" ng-if="!useV4">
+						
+						<div class="source-wrapper">
+							<span class="source" title="{{::item.tooltip}}"
+								ui-sref="feed(::{ name: item.source.name })"
+								ng-click="::sourceClick($event, item.source.name)">
+									<img ng-src="{{::item.source.icon}}" alt="{{::item.source.title}}">
+							</span>
+
+							<span class="source" title="All work by {{::item.user.displayName}}" ng-if="item.user"
+								ui-sref="feed(::{ name: 'user', user: item.user, skipSponsored: true})"
+								ng-click="::sourceClick($event, item.user.id)">
+									<img ng-if="!item.user.monogram" ng-src="{{::item.user.photo}}" alt="{{::item.user.displayName}}" use-monogram="item.user">
+									<span ng-if="item.user.monogram">{{item.user.monogram}}</span>
+							</span>
+						</div>
+
+						<div class="palette" ng-if="::item.palette && !item.source.article && enablePalettes">
+
+							<div ng-click="downloadSVG(item, $event)" class="icon-download" title="Download palette (SVG)"></div>
+
+							<span ng-repeat="color in item.palette track by $index"
+								style="background: {{color}}; border-color: {{color}}"
+								title="{{copySuccess ? 'Copied' : color}}"
+								title-top="true"
+								click-copy-color="{{::color}}"
+								prevent-click>
+							</span>
+						</div>
+
+						<h3 ng-bind="::item.title"></h3>
+
+						<span class="created" ng-if="item.source.name !== 'store'">{{item.created | timeAgo}}</span>
+
+						<div class="store" ng-if="item.source.name === 'store'">
+							<span class="tag" ng-repeat="tag in ::item.tags" ng-click="::searchTag(tag, $event)">{{tag}}</span>
+							<div class="price">{{item.price | price}}</div>
+						</div>
+
+					</div>
+
+					<!-- V4 -->
+					<div class="postInfo" ng-if="useV4">
+
+						<div class="flex">
+
+							<div class="source-wrapper">
+
+								<span class="source" title="{{::item.tooltip}}" ng-if="!item.user"
+									ui-sref="feed(::{ name: item.source.name })"
+									ng-click="::sourceClick($event, item.source.name)">
+										<img ng-src="{{::item.source.icon}}" alt="{{::item.source.title}}">
+								</span>
+
+								<span class="source" title="All work by {{::item.user.displayName}}" ng-if="item.user"
+									ui-sref="feed(::{ name: 'user', user: item.user, skipSponsored: true})"
+									ng-click="::sourceClick($event, item.user.id)">
+										<img ng-if="!item.user.monogram" ng-src="{{::item.user.photo}}" alt="{{::item.user.displayName}}" use-monogram="item.user">
+										<span ng-if="item.user.monogram">{{item.user.monogram}}</span>
+										<h4>{{::item.user.displayName}}</h4>
+								</span>
+
+							</div>
+
+							<span class="created at">{{item.created | timeAgo}}</span>
+
+							<div class="palette" ng-if="::item.palette && !item.source.article && enablePalettes">
+
+								<div ng-click="downloadSVG(item, $event)" class="icon-download" title="Download palette (SVG)"></div>
+
+								<span ng-repeat="color in item.palette track by $index"
+									style="background: {{color}}; border-color: {{color}}"
+									title="{{copySuccess ? 'Copied' : color}}"
+									title-top="true"
+									click-copy-color="{{::color}}"
+									prevent-click>
+								</span>
+							</div>
+
+						</div>
+
+						<h3 ng-bind="::item.title"></h3>
+
+						<div class="store" ng-if="item.source.name === 'store'">
+							<span class="tag" ng-repeat="tag in ::item.tags" ng-click="::searchTag(tag, $event)">{{tag}}</span>
+							<div class="price">{{item.price | price}}</div>
+						</div>
+
+					</div>
+				</a>
+
+				<div class="postMeta">
+
+					<div class="details angular-animate">
+
+						<span class="favorite icon-fav" ng-click="::toggleFavorite($event, item)" ng-if="::showFavorite" ng-class="{ active: item.favorite }" title="Save item" title-top="true"></span>
+
+						<div class="post-menu" ng-if="user && (!user.anonymous || flags.useAnonymousSources)">
+
+							<i class="icon-menu" title="More options" title-top="true" ng-click="item.showMenu = !item.showMenu"></i>
+
+							<ul class="dropdown" ng-if="item.showMenu" click-outside="item.showMenu = false">
+								<li ng-if="!item.nsfw && !item.userNSFW"><a href="" ng-click="::markNSFW(item)">Report NSFW</a></li>
+								<li ng-if="item.userNSFW"><a href="" ng-click="::unmarkNSFW(item)">Mark as SFW</a></li>
+								<li><a href="" ng-click="::markHidden(item)">Hide this from My feed</a></li>
+								<li><a href="" ng-click="::demoteSource(item.source)">Hide all content from <strong>{{::item.source.title}}</strong></a></li>
+								<li><a href="" ng-click="::removeFavorite($event, $index, item)"><i class="icon-bin"></i> Remove from saved</a></li>
+							</ul>
+						</div>
+
+						<div class="stats pull-right">
+							<span title="Votes" title-top="true" ng-if="::item.source.name === 'producthunt'">
+								<span class="icon-ph"></span>
+								<span>{{::item.stats.likes || 0 | thousandSuffix:1}}</span>
+							</span>
+							<span title="Clicks" title-top="true" ng-if="::item.clicks > 0">
+								<span class="icon-click"></span>
+								<span>{{::item.clicks || 0 | thousandSuffix:1}}</span>
+							</span>
+							<span title="Shares" title-top="true">
+								<span class="icon-share-lite"></span>
+								<span>{{::item.virality || 0 | thousandSuffix:1}}</span>
+							</span>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</ng-container>
+
+	</li>
+</ul>
+
+<div ng-show="feed && !feed.length && !blockEmpty && !isRendering" ng-transclude="no-data">
+</div>
+
+<ul class="ghost" ng-hide="hideGhost" >
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+</section>

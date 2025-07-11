@@ -1,0 +1,35 @@
+<div class="version-info" ng-class="{active: showAdmin}" ng-cloak>
+	
+	<div class="toggle" ng-click="showAdmin = !showAdmin" ng-class="{true: showAdmin}"><i></i></div>
+
+	<div class="pull-left" ng-if="showAdmin">
+		<p>Environment: <strong>{{currentEnvironment}}</strong> | 
+			<a ng-repeat="environment in environments" href="" ng-click="setEnvironment(environment)">{{environment}}</a> 
+		</p>
+		<p>API version: <strong>{{user.apiVersion}}</strong> | 
+			<a href="javascript:(function()%7Bfunction%20loadScript(url%2C%20callback)%0A%7B%0A%0A%20%20%20%20var%20head%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3B%0A%20%20%20%20var%20script%20%3D%20document.createElement(%22script%22)%3B%0A%20%20%20%20script.src%20%3D%20url%3B%0A%0A%20%20%20%20%2F%2F%20Attach%20handlers%20for%20all%20browsers%0A%20%20%20%20var%20done%20%3D%20false%3B%0A%0A%20%20%20%20script.onload%20%3D%20script.onreadystatechange%20%3D%20function()%20%7B%0A%20%20%20%20%20%20%20%20if(%20!done%20%26%26%20(%20!this.readyState%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7C%7C%20this.readyState%20%3D%3D%20%22loaded%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7C%7C%20this.readyState%20%3D%3D%20%22complete%22)%20)%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20done%20%3D%20true%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20Continue%20your%20code%0A%20%20%20%20%20%20%20%20%20%20%20%20callback()%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20Handle%20memory%20leak%20in%20IE%0A%20%20%20%20%20%20%20%20%20%20%20%20script.onload%20%3D%20script.onreadystatechange%20%3D%20null%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20head.removeChild(%20script%20)%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20alert('Item%20added%20to%20Queue')%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%3B%0A%0A%20%20%20%20head.appendChild(script)%3B%0A%7D%0A%0A(()%20%3D%3E%20%7B%0A%0A%20%20%20%20var%20item%20%3D%20%7B%0A%20%20%20%20%20%20%20%20link%3A%20window.location.href%2C%0A%20%20%20%20%20%20%20%20title%3A%20document.title%2C%0A%20%20%20%20%20%20%20%20source%3A%20'curated'%2C%0A%20%20%20%20%20%20%20%20delay%3A%2060%0A%20%20%20%20%7D%0A%0A%20%20%20%20var%20sringified%20%3D%20JSON.stringify(item)%0A%0A%20%20%20%20loadScript('https%3A%2F%2Fmuzli-crawler-es-prod.herokuapp.com%2Fqueue%2Fadd%3Fitem%3D'%20%2B%20encodeURIComponent(sringified)%2C%20function()%20%7B%7D)%3B%0A%20%20%20%20%2F%2F%20loadScript('http%3A%2F%2Flocalhost%3A3351%2Fqueue%2Fadd%3Fitem%3D'%20%2B%20encodeURIComponent(sringified)%2C%20function()%20%7B%7D)%3B%0A%0A%7D)()%3B%7D)()%3B">Curated Bookmarklet</a></p>
+		</p>
+	</div>
+
+	<div class="pull-right" ng-if="showAdmin">
+		<div class="pull-left">
+			<p>
+				FTX: 
+				<a href="" ng-click="resetFTX()"> Trigger FTX</a>
+				<a href="" ng-click="resetFTXNewUser()"> Trigger FTX with NEW User</a>
+				<a href="" ng-click="resetHomeScroll()"> Reset Home Scroll</a>
+				<a href="" ui-sref="safari"> Safari FTX</a>
+				<a href="" ng-click="toggleEmulateExtension()"> Toggle Emulate Extension</a>
+				<br/>
+				<br/>
+				Post-config steps:
+				<a href="" ng-click="resetBubbles()">Reset FTX bubbles</a>
+				<a href="" ng-click="resetPermissions()">Reset Permissions</a>
+				<a href="" ng-click="resetJobs()">Reset Jobs</a>
+				<a href="" ng-click="vm.showFtx = 'scroll'">Trigger final step</a>
+				<a href="" ui-sref="lite-check">Lite check</a>
+			</p>
+		</div>
+	</div>
+
+</div>

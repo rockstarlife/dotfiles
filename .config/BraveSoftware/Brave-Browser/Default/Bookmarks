@@ -1,0 +1,645 @@
+{
+   "checksum": "390ffd55bdcd4b9ad47325785368d102",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13327507182000000",
+            "date_last_used": "13385081965415345",
+            "guid": "615d8c06-0e51-4c92-9f3d-c7862a958890",
+            "id": "14",
+            "name": "Appstorrent - Игры и программы для macOS",
+            "type": "url",
+            "url": "https://appstorrent.ru/"
+         }, {
+            "date_added": "13327854081000000",
+            "date_last_used": "0",
+            "guid": "33679319-f542-4e2e-9224-234ae5aef8eb",
+            "id": "15",
+            "name": "Таблица Шульте онлайн",
+            "type": "url",
+            "url": "https://schultetable.ru/training/"
+         }, {
+            "date_added": "13327433490000000",
+            "date_last_used": "13361180420918764",
+            "guid": "0c52d247-c8a9-4f5a-be10-d7a33a80a096",
+            "id": "16",
+            "name": "Chainlist",
+            "type": "url",
+            "url": "https://chainlist.org/"
+         }, {
+            "date_added": "13328910915000000",
+            "date_last_used": "13361180438059118",
+            "guid": "45024254-21b8-40e9-831e-440d1cd5ab52",
+            "id": "17",
+            "name": "DefiLlama - DeFi Dashboard",
+            "type": "url",
+            "url": "https://defillama.com/"
+         }, {
+            "date_added": "13334207763000000",
+            "date_last_used": "13372091082882205",
+            "guid": "965409f6-e4b0-4aec-ae27-3181e4f9318d",
+            "id": "18",
+            "name": "Claude",
+            "type": "url",
+            "url": "https://claude.ai/chats"
+         }, {
+            "date_added": "13329018865000000",
+            "date_last_used": "13359153681870541",
+            "guid": "7b8542d3-aa6b-4a57-ba06-e8d6d260179a",
+            "id": "19",
+            "name": "Hello Assistance Requested",
+            "type": "url",
+            "url": "https://chat.openai.com/"
+         }, {
+            "date_added": "13331848862000000",
+            "date_last_used": "13354494642238287",
+            "guid": "89bd7a1e-29ea-4310-bd0e-f4b2eecce7a8",
+            "id": "20",
+            "name": "Playground - OpenAI API",
+            "type": "url",
+            "url": "https://platform.openai.com/playground"
+         }, {
+            "date_added": "13329067433000000",
+            "date_last_used": "13369258066449147",
+            "guid": "4f90af07-1862-4999-9178-de8ca86c6c61",
+            "id": "21",
+            "name": "Google Trends",
+            "type": "url",
+            "url": "https://trends.google.com/trends/"
+         }, {
+            "date_added": "13335759690000000",
+            "date_last_used": "0",
+            "guid": "5c80137a-0c6a-4f19-8466-f46e0fe4bbeb",
+            "id": "22",
+            "name": "Perplexity AI",
+            "type": "url",
+            "url": "https://www.perplexity.ai/"
+         }, {
+            "children": [ {
+               "children": [ {
+                  "date_added": "13322577761000000",
+                  "date_last_used": "0",
+                  "guid": "1af21cd7-1fdc-47fe-a07c-725aedf5bb17",
+                  "id": "25",
+                  "name": "Get Help",
+                  "type": "url",
+                  "url": "https://support.mozilla.org/products/firefox"
+               }, {
+                  "date_added": "13322577761000000",
+                  "date_last_used": "0",
+                  "guid": "0d54fa4a-ba8a-4180-b031-76b18f1f95ae",
+                  "id": "26",
+                  "name": "Customize Firefox",
+                  "type": "url",
+                  "url": "https://support.mozilla.org/kb/customize-firefox-controls-buttons-and-toolbars?utm_source=firefox-browser&utm_medium=default-bookmarks&utm_campaign=customize"
+               }, {
+                  "date_added": "13322577761000000",
+                  "date_last_used": "0",
+                  "guid": "5e524d3e-82de-43a8-a261-b2d8aa2de7d4",
+                  "id": "27",
+                  "name": "Get Involved",
+                  "type": "url",
+                  "url": "https://www.mozilla.org/contribute/"
+               }, {
+                  "date_added": "13322577761000000",
+                  "date_last_used": "0",
+                  "guid": "54090676-cffb-494b-8cdc-42aa08f10ee5",
+                  "id": "28",
+                  "name": "About Us",
+                  "type": "url",
+                  "url": "https://www.mozilla.org/about/"
+               } ],
+               "date_added": "13341289597579336",
+               "date_last_used": "0",
+               "date_modified": "13341289597579336",
+               "guid": "8435f5d8-c3fe-4dae-b4c3-0fc360dad837",
+               "id": "24",
+               "name": "Mozilla Firefox",
+               "type": "folder"
+            }, {
+               "date_added": "13327346841000000",
+               "date_last_used": "0",
+               "guid": "78bcb772-a7a1-48a6-88aa-628c3d12174b",
+               "id": "29",
+               "name": "Polygon (MATIC) Blockchain Explorer",
+               "type": "url",
+               "url": "https://polygonscan.com/"
+            }, {
+               "date_added": "13327360355000000",
+               "date_last_used": "0",
+               "guid": "795f40b2-dc70-4574-943e-0ba079f6ac73",
+               "id": "30",
+               "name": "Cryptocurrency Prices, Charts And Market Capitalizations | CoinMarketCap",
+               "type": "url",
+               "url": "https://coinmarketcap.com/"
+            }, {
+               "date_added": "13327384291000000",
+               "date_last_used": "0",
+               "guid": "bed843ae-7297-47c6-9cc2-df6f61874019",
+               "id": "31",
+               "name": "Ethereum (ETH) Blockchain Explorer",
+               "type": "url",
+               "url": "https://etherscan.io/"
+            }, {
+               "date_added": "13329112751000000",
+               "date_last_used": "0",
+               "guid": "2d8ac557-35fa-4e52-8fef-cc86d6a13cc3",
+               "id": "32",
+               "name": "Bard",
+               "type": "url",
+               "url": "https://bard.google.com/?hl=en"
+            }, {
+               "date_added": "13329431017000000",
+               "date_last_used": "0",
+               "guid": "8325f30c-285b-457a-a99f-7cda950bbcf6",
+               "id": "33",
+               "name": "Очень продвинутый онлайн калькулятор",
+               "type": "url",
+               "url": "https://itpride.net/useful/ochen-prodvinutyj-onlajn-kalkulyator.html"
+            }, {
+               "date_added": "13329459186000000",
+               "date_last_used": "0",
+               "guid": "95acf899-3094-4049-ac3b-7906169d3df6",
+               "id": "34",
+               "name": "(1) Build an Online Community in 6 Steps | Getting Started | Step By Step | Tutorial - YouTube",
+               "type": "url",
+               "url": "https://www.youtube.com/watch?v=cjzCsQ0iw6o"
+            }, {
+               "date_added": "13330304055000000",
+               "date_last_used": "0",
+               "guid": "5898fdff-93c7-4e10-8c90-847960de7ecb",
+               "id": "35",
+               "name": "PST.NET - Virtual cards for payments. Crypto-fiat exchange",
+               "type": "url",
+               "url": "https://app.pst.net/app/dashboard"
+            }, {
+               "date_added": "13330863607000000",
+               "date_last_used": "0",
+               "guid": "7e18fbc3-4d21-45c7-8b33-f2e0df915e61",
+               "id": "36",
+               "name": "L — 400 × 400 пикс.",
+               "type": "url",
+               "url": "https://www.canva.com/design/DAFlaQUZ3Rk/K4hEMq8f25x3M0xO3D5tuA/edit"
+            } ],
+            "date_added": "13341289597577563",
+            "date_last_used": "0",
+            "date_modified": "13341289597577563",
+            "guid": "88cee88d-b4f6-46be-b65e-5ffd0626fb3f",
+            "id": "23",
+            "name": "Импортированные из Firefox",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "children": [ {
+                  "date_added": "13327507182000000",
+                  "date_last_used": "0",
+                  "guid": "e960a0d1-ff2e-4542-9b21-e8933d6427e9",
+                  "id": "39",
+                  "name": "Appstorrent - Игры и программы для macOS",
+                  "type": "url",
+                  "url": "https://appstorrent.ru/"
+               }, {
+                  "date_added": "13327854081000000",
+                  "date_last_used": "0",
+                  "guid": "ba82c708-e285-4b31-9f58-3838952b1697",
+                  "id": "40",
+                  "name": "Таблица Шульте онлайн",
+                  "type": "url",
+                  "url": "https://schultetable.ru/training/"
+               }, {
+                  "date_added": "13327433490000000",
+                  "date_last_used": "0",
+                  "guid": "a2ea961b-8de9-4066-a489-317ebbbf3791",
+                  "id": "41",
+                  "name": "Chainlist",
+                  "type": "url",
+                  "url": "https://chainlist.org/"
+               }, {
+                  "date_added": "13328910915000000",
+                  "date_last_used": "0",
+                  "guid": "5478f4c3-8fd8-4488-9a2f-e1706854a6f7",
+                  "id": "42",
+                  "name": "DefiLlama - DeFi Dashboard",
+                  "type": "url",
+                  "url": "https://defillama.com/"
+               }, {
+                  "date_added": "13334207763000000",
+                  "date_last_used": "0",
+                  "guid": "a3b1d9d2-c95b-49d4-b7ca-c326a156af1c",
+                  "id": "43",
+                  "name": "Claude",
+                  "type": "url",
+                  "url": "https://claude.ai/chats"
+               }, {
+                  "date_added": "13329018865000000",
+                  "date_last_used": "0",
+                  "guid": "12fb3779-426f-4d47-a831-8df031febc3f",
+                  "id": "44",
+                  "name": "Hello Assistance Requested",
+                  "type": "url",
+                  "url": "https://chat.openai.com/"
+               }, {
+                  "date_added": "13331848862000000",
+                  "date_last_used": "0",
+                  "guid": "564999a8-70ce-4325-b323-7a4b77898f72",
+                  "id": "45",
+                  "name": "Playground - OpenAI API",
+                  "type": "url",
+                  "url": "https://platform.openai.com/playground"
+               }, {
+                  "date_added": "13329067433000000",
+                  "date_last_used": "0",
+                  "guid": "b6c369de-de44-4779-b779-0d635afc6576",
+                  "id": "46",
+                  "name": "Google Trends",
+                  "type": "url",
+                  "url": "https://trends.google.com/trends/"
+               }, {
+                  "date_added": "13335759690000000",
+                  "date_last_used": "0",
+                  "guid": "e0de3720-91e9-41ff-8cf5-7620cf6f2a4d",
+                  "id": "47",
+                  "name": "Perplexity AI",
+                  "type": "url",
+                  "url": "https://www.perplexity.ai/"
+               } ],
+               "date_added": "13341289599718565",
+               "date_last_used": "0",
+               "date_modified": "13341289599718565",
+               "guid": "4cfc4bd5-9f57-4199-972f-c35b44a3c20c",
+               "id": "38",
+               "name": "toolbar",
+               "type": "folder"
+            }, {
+               "children": [ {
+                  "date_added": "13322577761000000",
+                  "date_last_used": "0",
+                  "guid": "08b16c56-b180-4f91-b92f-2eac1a74bfb0",
+                  "id": "49",
+                  "name": "Get Help",
+                  "type": "url",
+                  "url": "https://support.mozilla.org/products/firefox"
+               }, {
+                  "date_added": "13322577761000000",
+                  "date_last_used": "0",
+                  "guid": "a1e31494-b2ba-4d14-95f6-646fe727c405",
+                  "id": "50",
+                  "name": "Customize Firefox",
+                  "type": "url",
+                  "url": "https://support.mozilla.org/kb/customize-firefox-controls-buttons-and-toolbars?utm_source=firefox-browser&utm_medium=default-bookmarks&utm_campaign=customize"
+               }, {
+                  "date_added": "13322577761000000",
+                  "date_last_used": "0",
+                  "guid": "28c98482-24fe-4bc6-b373-07d865306705",
+                  "id": "51",
+                  "name": "Get Involved",
+                  "type": "url",
+                  "url": "https://www.mozilla.org/contribute/"
+               }, {
+                  "date_added": "13322577761000000",
+                  "date_last_used": "0",
+                  "guid": "4d3c6041-e907-46a2-ab67-26249db992b2",
+                  "id": "52",
+                  "name": "About Us",
+                  "type": "url",
+                  "url": "https://www.mozilla.org/about/"
+               } ],
+               "date_added": "13341289599719213",
+               "date_last_used": "0",
+               "date_modified": "13341289599719213",
+               "guid": "1e7f33e9-d414-4840-bb88-800e4048bb4c",
+               "id": "48",
+               "name": "Mozilla Firefox",
+               "type": "folder"
+            }, {
+               "date_added": "13327346841000000",
+               "date_last_used": "0",
+               "guid": "5b1af86c-c620-4647-89f1-b02e16b75336",
+               "id": "53",
+               "name": "Polygon (MATIC) Blockchain Explorer",
+               "type": "url",
+               "url": "https://polygonscan.com/"
+            }, {
+               "date_added": "13327360355000000",
+               "date_last_used": "0",
+               "guid": "a58e0230-1095-4b96-b2d1-72d46ef8f05a",
+               "id": "54",
+               "name": "Cryptocurrency Prices, Charts And Market Capitalizations | CoinMarketCap",
+               "type": "url",
+               "url": "https://coinmarketcap.com/"
+            }, {
+               "date_added": "13327384291000000",
+               "date_last_used": "0",
+               "guid": "07e019d2-588d-4b34-81f5-0c5963ce5be0",
+               "id": "55",
+               "name": "Ethereum (ETH) Blockchain Explorer",
+               "type": "url",
+               "url": "https://etherscan.io/"
+            }, {
+               "date_added": "13329112751000000",
+               "date_last_used": "0",
+               "guid": "d441189a-d671-41d7-ab67-f9aa8f7ca393",
+               "id": "56",
+               "name": "Bard",
+               "type": "url",
+               "url": "https://bard.google.com/?hl=en"
+            }, {
+               "date_added": "13329431017000000",
+               "date_last_used": "0",
+               "guid": "d9ef1f84-2d1c-4eb5-8d26-4aac5d6d279d",
+               "id": "57",
+               "name": "Очень продвинутый онлайн калькулятор",
+               "type": "url",
+               "url": "https://itpride.net/useful/ochen-prodvinutyj-onlajn-kalkulyator.html"
+            }, {
+               "date_added": "13329459186000000",
+               "date_last_used": "0",
+               "guid": "abf3d1bd-f244-418d-adae-5c109e5b5023",
+               "id": "58",
+               "name": "(1) Build an Online Community in 6 Steps | Getting Started | Step By Step | Tutorial - YouTube",
+               "type": "url",
+               "url": "https://www.youtube.com/watch?v=cjzCsQ0iw6o"
+            }, {
+               "date_added": "13330304055000000",
+               "date_last_used": "0",
+               "guid": "c0cf0b74-2661-4aa4-9e52-8ab41e333b9e",
+               "id": "59",
+               "name": "PST.NET - Virtual cards for payments. Crypto-fiat exchange",
+               "type": "url",
+               "url": "https://app.pst.net/app/dashboard"
+            }, {
+               "date_added": "13330863607000000",
+               "date_last_used": "0",
+               "guid": "0a19d4c9-2573-432a-acfc-4821f95b9e15",
+               "id": "60",
+               "name": "L — 400 × 400 пикс.",
+               "type": "url",
+               "url": "https://www.canva.com/design/DAFlaQUZ3Rk/K4hEMq8f25x3M0xO3D5tuA/edit"
+            } ],
+            "date_added": "13341289599718325",
+            "date_last_used": "0",
+            "date_modified": "13341289599718325",
+            "guid": "8fbe55f4-2ed4-4c41-9733-f739517be6ef",
+            "id": "37",
+            "name": "Импортированные из Firefox (1)",
+            "type": "folder"
+         }, {
+            "date_added": "13356666845750233",
+            "date_last_used": "13379261214971241",
+            "guid": "f6305e3a-7f7a-491a-84c0-60f151c68349",
+            "id": "61",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Conva",
+            "type": "url",
+            "url": "https://www.canva.com/"
+         }, {
+            "date_added": "13358167061545004",
+            "date_last_used": "0",
+            "guid": "c33d0789-ad55-4255-8960-399e0eae7e3b",
+            "id": "62",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "▼ 0.003559 | Трейдинг 10000SATSUSDT | Bybit Бессрочные контракты",
+            "type": "url",
+            "url": "https://www.bybit.com/trade/usdt/10000SATSUSDT"
+         }, {
+            "date_added": "13359235701299566",
+            "date_last_used": "0",
+            "guid": "1a79ad25-c2c0-4290-b2be-3ccf6dfff533",
+            "id": "63",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "▼ 0.5924 | Трейдинг LUNA2USDT | Bybit Бессрочные контракты",
+            "type": "url",
+            "url": "https://www.bybit.com/trade/usdt/LUNA2USDT"
+         }, {
+            "date_added": "13365787560052054",
+            "date_last_used": "0",
+            "guid": "f4f43902-df77-4a73-a201-016189b2bc98",
+            "id": "64",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Crypto Bubbles",
+            "type": "url",
+            "url": "https://cryptobubbles.net/"
+         }, {
+            "date_added": "13372284499010051",
+            "date_last_used": "0",
+            "guid": "1fffa2e0-58df-491e-81e6-74886514f8aa",
+            "id": "65",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Key Swing — Презентация — Canva",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAGQ73X9JY4/ajpzkBwkyyduxXlC3dEE8g/edit"
+         }, {
+            "date_added": "13372358007925257",
+            "date_last_used": "0",
+            "guid": "1efc9cbc-a371-4725-936e-bceff6418777",
+            "id": "66",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Добавить заголовок — Презентация",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAGSPMvwOes/6qzqqmUIR_U3ns6CgUAODA/edit"
+         }, {
+            "date_added": "13373937456550274",
+            "date_last_used": "0",
+            "guid": "1eea769f-4dd2-4100-90df-e6f60d830883",
+            "id": "67",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "ChatGPT",
+            "type": "url",
+            "url": "https://chatgpt.com/"
+         }, {
+            "date_added": "13374257365840506",
+            "date_last_used": "0",
+            "guid": "f6989620-58bd-4eb9-b361-175097b51111",
+            "id": "68",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "BTCUSD 67 673,67 ▲ +1.57% Без названия",
+            "type": "url",
+            "url": "https://ru.tradingview.com/chart/Maer81UO/"
+         }, {
+            "date_added": "13375292071246385",
+            "date_last_used": "0",
+            "guid": "cff376b8-958f-4802-b5e5-7a46a781c04a",
+            "id": "69",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Y $/ — Презентация — Canva",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAGVntNgqzk/IEgQWxZ45dUwmKOGRlL--A/edit"
+         }, {
+            "date_added": "13383879006541428",
+            "date_last_used": "0",
+            "guid": "1e19d99e-6032-42cc-8386-e376d82e150a",
+            "id": "70",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Untitled - Miro",
+            "type": "url",
+            "url": "https://miro.com/app/board/uXjVIfkRLQE=/"
+         }, {
+            "date_added": "13384733785113744",
+            "date_last_used": "0",
+            "guid": "9a7583f7-a7dc-4a6a-a53f-46c56ce96355",
+            "id": "71",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Похожие аниме / Owari no Seraph / Аниме",
+            "type": "url",
+            "url": "https://shikimori.one/animes/26243-owari-no-seraph/similar"
+         }, {
+            "date_added": "13385055848402582",
+            "date_last_used": "0",
+            "guid": "d356e54e-44c8-472c-ac12-5f6ec9fa7ccc",
+            "id": "72",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Plan For Day - Miro",
+            "type": "url",
+            "url": "https://miro.com/app/board/uXjVIaIAvYU=/"
+         } ],
+         "date_added": "13396587161505982",
+         "date_last_used": "0",
+         "date_modified": "13385055848402582",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13348178742509201",
+            "date_last_used": "0",
+            "guid": "d155453a-6706-40ee-83a5-93b22de19fbc",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "How To Find Untapped Winning Dropshipping Products In 2024 - YouTube",
+            "type": "url",
+            "url": "https://www.youtube.com/watch?v=BH6_N-v-isk"
+         }, {
+            "date_added": "13348874092178447",
+            "date_last_used": "0",
+            "guid": "36d5b48a-26b1-4d16-bd7f-f22b02e30540",
+            "id": "6",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Flair",
+            "type": "url",
+            "url": "https://app.flair.ai/projects/W9j0OFv7FNfaSbFEtSa2"
+         }, {
+            "date_added": "13350083518664237",
+            "date_last_used": "0",
+            "guid": "a3547c6f-5880-4778-bfc0-7aaa303da056",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Дизайн без названия — 500 × 500 пикс.",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAF6RNYrt3I/ewV_wu-abfyh-dlOJRTnXQ/edit"
+         }, {
+            "date_added": "13390924598470628",
+            "date_last_used": "0",
+            "guid": "3d49ca2e-e67f-4179-957f-3a44c21ae9e1",
+            "id": "8",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "offline - Google Таблицы",
+            "type": "url",
+            "url": "https://docs.google.com/spreadsheets/d/1-_G4skdT3gaeW7u-T440aVEYU49ZWcL_n4p_fxarDt0/edit?gid=1189911454#gid=1189911454"
+         }, {
+            "date_added": "13392749770607036",
+            "date_last_used": "0",
+            "guid": "5b012cfe-a432-479e-949b-725d0be29d3e",
+            "id": "9",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Установка Arch Linux на MacBook Air с Broadcom Wi-Fi - Grok",
+            "type": "url",
+            "url": "https://grok.com/chat/ddbb908e-fe24-44be-b190-8741ae9e27ce?referrer=website"
+         }, {
+            "date_added": "13394493429809167",
+            "date_last_used": "0",
+            "guid": "46c29be9-195e-4c6f-a01e-568d3a2cfd1b",
+            "id": "10",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "The AI workspace that works for you. | Notion",
+            "type": "url",
+            "url": "https://www.notion.so/"
+         } ],
+         "date_added": "13396587161505982",
+         "date_last_used": "0",
+         "date_modified": "13394493429809167",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [ {
+            "date_added": "13387023768885241",
+            "date_last_used": "0",
+            "guid": "0bca021d-fcad-4dd1-beeb-239de48320c3",
+            "id": "11",
+            "name": "Decks - AnkiWeb",
+            "type": "url",
+            "url": "https://ankiweb.net/decks"
+         }, {
+            "date_added": "13388589820545501",
+            "date_last_used": "0",
+            "guid": "8f114b97-ac35-4625-8c05-1179c4cc9a88",
+            "id": "12",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Структура дня - Miro",
+            "type": "url",
+            "url": "https://miro.com/app/board/uXjVIeP9TNM=/"
+         }, {
+            "date_added": "13389397191431892",
+            "date_last_used": "0",
+            "guid": "323bdc15-4aa9-47fa-88d9-9e10a73564e0",
+            "id": "13",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "▲ 0.15695 | DOGEUSDT Perpetual | DOGEUSDT Futures Trading | KuCoin Futures",
+            "type": "url",
+            "url": "https://www.kucoin.com/futures/trade/DOGEUSDTM"
+         } ],
+         "date_added": "13396587161505982",
+         "date_last_used": "0",
+         "date_modified": "13389397191431892",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

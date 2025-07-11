@@ -1,0 +1,32 @@
+{
+   "contextMenuLoadSubtitles": {
+      "message": "Charger des sous-titres"
+   },
+   "contextMenuMineSubtitle": {
+      "message": "Miner sous-titre"
+   },
+   "extensionDescription": {
+      "message": "Améliorer la vidéo en streaming pour l’apprentissage des langues."
+   },
+   "shortcutExportCardDescription": {
+      "message": "Exporter la carte directement vers Anki, sans passer par la boîte de dialogue."
+   },
+   "shortcutMineSubtitleAndOpenDialogDescription": {
+      "message": "Extraire le sous-titre actuel et ouvrir la boîte de dialogue d’export Anki. Lorsque la vidéo est synchronisée sans fichier de sous-titres, démarre/arrête l’enregistrement audio."
+   },
+   "shortcutMineSubtitleDescription": {
+      "message": "Extraire le sous-titre actuel. Lorsque la vidéo est synchronisée sans fichier de sous-titres, démarre/arrête l’enregistrement audio."
+   },
+   "shortcutSelectSubtitleTrackDescription": {
+      "message": "Sélectionner les pistes de sous-titres à charger."
+   },
+   "shortcutTakeScreenshotDescription": {
+      "message": "Prendre une capture d’écran manuellement, en remplaçant celle prise automatiquement lors du minage."
+   },
+   "shortcutToggleRecordingDescription": {
+      "message": "Démarrer/arrêter manuellement l’enregistrement audio, même lorsqu’un fichier de sous-titres est chargé."
+   },
+   "shortcutUpdateLastCardDescription": {
+      "message": "Mettre à jour la dernière carte Anki créée avec les médias capturés par asbplayer. Lorsque la vidéo est synchronisée sans fichier de sous-titres, démarre/arrête l’enregistrement audio."
+   }
+}

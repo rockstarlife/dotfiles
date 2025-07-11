@@ -1,0 +1,12 @@
+<div class="cf">
+
+  <h2>All your feeds</h2>
+
+  <div class="feedSorters pull-right" ng-if="['search', 'favorites'].indexOf(currentSource) === -1 && ['vlogs', 'dribbble', 'producthunt'].indexOf(currentSource.name) === -1" ng-cloak>
+    <a ng-click="::sortFeed()" ng-class="{ active: currentFeedSort !== 'virality' }" href="" title="Sort by date">RECENT</a>
+    <a ng-click="::sortFeed('virality')" ng-class="{ active: currentFeedSort === 'virality' }" href="" title="Sort by popularity">Recent</a>
+  </div>
+
+</div>
+
+<scrollable-feed items="items" sponsored="sponsored" ng-hide="errors.length" load-on-sort="viralTimes" show-favorite></scrollable-feed>
