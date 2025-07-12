@@ -1,18 +1,12 @@
-2025/07/11-21:52:53.909 2af Reusing MANIFEST /home/Neo/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/07/11-21:52:53.909 2af Recovering log #35
-2025/07/11-21:52:53.910 2af Reusing old log /home/Neo/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000035.log 
-2025/07/11-21:52:55.972 2b0 Compacting 1@1 + 1@2 files
-2025/07/11-21:52:55.989 2b0 Generated table #38@1: 350 keys, 78842 bytes
-2025/07/11-21:52:55.989 2b0 Compacted 1@1 + 1@2 files => 78842 bytes
-2025/07/11-21:52:56.003 2b0 compacted to: files[ 0 0 1 0 0 0 0 ]
-2025/07/11-21:52:56.003 2b0 Delete type=2 #34
-2025/07/11-21:52:56.003 2b0 Delete type=2 #36
-2025/07/11-21:57:00.139 2b0 Level-0 table #40: started
-2025/07/11-21:57:00.159 2b0 Level-0 table #40: 1665393 bytes OK
-2025/07/11-21:57:00.168 2b0 Delete type=0 #35
-2025/07/11-21:57:44.558 2b0 Compacting 1@1 + 1@2 files
-2025/07/11-21:57:44.579 2b0 Generated table #41@1: 349 keys, 66592 bytes
-2025/07/11-21:57:44.579 2b0 Compacted 1@1 + 1@2 files => 66592 bytes
-2025/07/11-21:57:44.590 2b0 compacted to: files[ 0 0 1 0 0 0 0 ]
-2025/07/11-21:57:44.591 2b0 Delete type=2 #40
-2025/07/11-21:57:44.593 2b0 Delete type=2 #38
+2025/07/12-07:39:22.105 408 Reusing MANIFEST /home/Neo/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/12-07:39:22.106 408 Recovering log #46
+2025/07/12-07:39:22.118 408 Reusing old log /home/Neo/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000046.log 
+2025/07/12-07:56:17.066 409 Level-0 table #51: started
+2025/07/12-07:56:17.094 409 Level-0 table #51: 1660036 bytes OK
+2025/07/12-07:56:17.109 409 Delete type=0 #46
+2025/07/12-08:01:36.961 40a Compacting 1@1 + 1@2 files
+2025/07/12-08:01:36.979 40a Generated table #52@1: 378 keys, 78570 bytes
+2025/07/12-08:01:36.979 40a Compacted 1@1 + 1@2 files => 78570 bytes
+2025/07/12-08:01:36.993 40a compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/07/12-08:01:36.993 40a Delete type=2 #48
+2025/07/12-08:01:36.993 40a Delete type=2 #51

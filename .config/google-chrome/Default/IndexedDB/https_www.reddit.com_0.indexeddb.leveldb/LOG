@@ -1,17 +1,15 @@
-2025/07/11-00:30:43.509 2ad Creating DB /home/Neo/.config/google-chrome/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb since it was missing.
-2025/07/11-00:30:43.537 2ad Reusing MANIFEST /home/Neo/.config/google-chrome/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/07/11-00:50:22.194 2ac Level-0 table #5: started
-2025/07/11-00:50:22.221 2ac Level-0 table #5: 977067 bytes OK
-2025/07/11-00:50:22.233 2ac Delete type=0 #3
-2025/07/11-00:50:25.083 2ad Level-0 table #7: started
-2025/07/11-00:50:25.095 2ad Level-0 table #7: 24587 bytes OK
-2025/07/11-00:50:25.109 2ad Delete type=0 #4
-2025/07/11-00:50:25.109 2ad Manual compaction at level-0 from (begin) .. (end); will stop at (end)
-2025/07/11-00:50:25.110 2ad Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x03\x02\x04\x01\x01\x01\x00-' @ 2426 : 1
-2025/07/11-00:50:25.110 2ad Compacting 1@1 + 1@2 files
-2025/07/11-00:50:25.122 2ad Generated table #8@1: 116 keys, 15296 bytes
-2025/07/11-00:50:25.122 2ad Compacted 1@1 + 1@2 files => 15296 bytes
-2025/07/11-00:50:25.133 2ad compacted to: files[ 0 0 1 0 0 0 0 ]
-2025/07/11-00:50:25.134 2ad Delete type=2 #7
-2025/07/11-00:50:25.134 2ad Delete type=2 #5
-2025/07/11-00:50:25.135 2ad Manual compaction at level-1 from '\x00\x02\x03\x02\x04\x01\x01\x01\x00-' @ 2426 : 1 .. (end); will stop at (end)
+2025/07/12-23:28:03.535 2f1 Reusing MANIFEST /home/neo/.config/google-chrome/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/12-23:28:03.536 2f1 Recovering log #6
+2025/07/12-23:28:03.536 2f1 Reusing old log /home/neo/.config/google-chrome/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/000006.log 
+2025/07/12-23:53:36.820 2f3 Level-0 table #11: started
+2025/07/12-23:53:36.840 2f3 Level-0 table #11: 982594 bytes OK
+2025/07/12-23:53:36.854 2f3 Delete type=0 #6
+2025/07/13-00:03:55.311 2f3 Compacting 1@1 + 1@2 files
+2025/07/13-00:03:55.326 2f3 Generated table #12@1: 128 keys, 27602 bytes
+2025/07/13-00:03:55.326 2f3 Compacted 1@1 + 1@2 files => 27602 bytes
+2025/07/13-00:03:55.339 2f3 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/07/13-00:03:55.340 2f3 Delete type=2 #11
+2025/07/13-00:03:55.340 2f3 Delete type=2 #8
+2025/07/13-00:13:36.044 2f2 Level-0 table #14: started
+2025/07/13-00:13:36.068 2f2 Level-0 table #14: 974869 bytes OK
+2025/07/13-00:13:36.081 2f2 Delete type=0 #10

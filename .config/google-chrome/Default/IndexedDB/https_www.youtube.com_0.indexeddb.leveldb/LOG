@@ -1,12 +1,39 @@
-2025/07/11-22:30:29.001 2b0 Reusing MANIFEST /home/Neo/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/07/11-22:30:29.001 2b0 Recovering log #39
-2025/07/11-22:30:29.008 2b0 Reusing old log /home/Neo/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000039.log 
-2025/07/11-22:30:39.723 2b0 Level-0 table #44: started
-2025/07/11-22:30:39.746 2b0 Level-0 table #44: 1896808 bytes OK
-2025/07/11-22:30:39.759 2b0 Delete type=0 #39
-2025/07/11-22:34:23.266 2af Compacting 1@1 + 1@2 files
-2025/07/11-22:34:23.282 2af Generated table #45@1: 349 keys, 58663 bytes
-2025/07/11-22:34:23.283 2af Compacted 1@1 + 1@2 files => 58663 bytes
-2025/07/11-22:34:23.294 2af compacted to: files[ 0 0 1 0 0 0 0 ]
-2025/07/11-22:34:23.294 2af Delete type=2 #44
-2025/07/11-22:34:23.295 2af Delete type=2 #41
+2025/07/12-23:07:20.872 2f2 Reusing MANIFEST /home/neo/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/12-23:07:20.872 2f2 Recovering log #50
+2025/07/12-23:07:20.877 2f2 Reusing old log /home/neo/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000050.log 
+2025/07/12-23:10:03.092 2f2 Level-0 table #55: started
+2025/07/12-23:10:03.122 2f2 Level-0 table #55: 1477833 bytes OK
+2025/07/12-23:10:03.138 2f2 Delete type=0 #50
+2025/07/12-23:15:24.910 2f1 Compacting 1@1 + 1@2 files
+2025/07/12-23:15:24.933 2f1 Generated table #56@1: 389 keys, 79737 bytes
+2025/07/12-23:15:24.933 2f1 Compacted 1@1 + 1@2 files => 79737 bytes
+2025/07/12-23:15:24.945 2f1 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/07/12-23:15:24.945 2f1 Delete type=2 #55
+2025/07/12-23:15:24.945 2f1 Delete type=2 #52
+2025/07/12-23:21:13.207 2f2 Level-0 table #58: started
+2025/07/12-23:21:13.226 2f2 Level-0 table #58: 1122311 bytes OK
+2025/07/12-23:21:13.236 2f2 Delete type=0 #54
+2025/07/12-23:21:33.750 2f2 Compacting 1@1 + 1@2 files
+2025/07/12-23:21:33.765 2f2 Generated table #59@1: 386 keys, 72574 bytes
+2025/07/12-23:21:33.765 2f2 Compacted 1@1 + 1@2 files => 72574 bytes
+2025/07/12-23:21:33.775 2f2 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/07/12-23:21:33.776 2f2 Delete type=2 #56
+2025/07/12-23:21:33.776 2f2 Delete type=2 #58
+2025/07/13-00:06:01.204 2f2 Level-0 table #61: started
+2025/07/13-00:06:01.232 2f2 Level-0 table #61: 1181550 bytes OK
+2025/07/13-00:06:01.248 2f2 Delete type=0 #57
+2025/07/13-00:23:57.943 2f2 Compacting 1@1 + 1@2 files
+2025/07/13-00:23:57.969 2f2 Generated table #62@1: 412 keys, 79900 bytes
+2025/07/13-00:23:57.970 2f2 Compacted 1@1 + 1@2 files => 79900 bytes
+2025/07/13-00:23:57.983 2f2 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/07/13-00:23:57.983 2f2 Delete type=2 #59
+2025/07/13-00:23:57.983 2f2 Delete type=2 #61
+2025/07/13-00:29:40.266 2f2 Level-0 table #64: started
+2025/07/13-00:29:40.292 2f2 Level-0 table #64: 1455410 bytes OK
+2025/07/13-00:29:40.306 2f2 Delete type=0 #60
+2025/07/13-00:32:32.193 3c9 Compacting 1@1 + 1@2 files
+2025/07/13-00:32:32.217 3c9 Generated table #65@1: 405 keys, 66259 bytes
+2025/07/13-00:32:32.217 3c9 Compacted 1@1 + 1@2 files => 66259 bytes
+2025/07/13-00:32:32.228 3c9 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/07/13-00:32:32.229 3c9 Delete type=2 #64
+2025/07/13-00:32:32.229 3c9 Delete type=2 #62

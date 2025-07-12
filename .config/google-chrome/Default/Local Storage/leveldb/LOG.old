@@ -1,6 +1,3 @@
-2025/07/11-07:14:33.063 4 Reusing MANIFEST /home/Neo/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
-2025/07/11-07:14:33.075 4 Recovering log #88
-2025/07/11-07:14:33.087 4 Reusing old log /home/Neo/.config/google-chrome/Default/Local Storage/leveldb/000088.log 
-2025/07/11-07:15:00.399 4 Level-0 table #94: started
-2025/07/11-07:15:00.416 4 Level-0 table #94: 20723 bytes OK
-2025/07/11-07:15:00.429 4 Delete type=0 #88
+2025/07/12-22:47:31.042 4 Reusing MANIFEST /home/neo/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
+2025/07/12-22:47:31.049 4 Recovering log #196
+2025/07/12-22:47:31.054 4 Reusing old log /home/neo/.config/google-chrome/Default/Local Storage/leveldb/000196.log 

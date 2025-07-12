@@ -1,6 +1,18 @@
-2025/07/11-21:52:43.234 2b0 Reusing MANIFEST /home/Neo/.config/google-chrome/Default/Sync Data/LevelDB/MANIFEST-000001
-2025/07/11-21:52:43.262 2b0 Recovering log #60
-2025/07/11-21:52:43.272 2b0 Reusing old log /home/Neo/.config/google-chrome/Default/Sync Data/LevelDB/000060.log 
-2025/07/11-22:28:01.320 2bd Level-0 table #64: started
-2025/07/11-22:28:01.335 2bd Level-0 table #64: 101106 bytes OK
-2025/07/11-22:28:01.348 2bd Delete type=0 #60
+2025/07/12-23:01:05.277 2f1 Reusing MANIFEST /home/neo/.config/google-chrome/Default/Sync Data/LevelDB/MANIFEST-000001
+2025/07/12-23:01:05.315 2f1 Recovering log #83
+2025/07/12-23:01:05.326 2f1 Reusing old log /home/neo/.config/google-chrome/Default/Sync Data/LevelDB/000083.log 
+2025/07/12-23:08:47.236 2f2 Level-0 table #87: started
+2025/07/12-23:08:47.250 2f2 Level-0 table #87: 90120 bytes OK
+2025/07/12-23:08:47.263 2f2 Delete type=0 #83
+2025/07/12-23:08:47.264 2f2 Compacting 4@0 + 1@1 files
+2025/07/12-23:08:47.280 2f2 Generated table #88@0: 148 keys, 20654 bytes
+2025/07/12-23:08:47.281 2f2 Compacted 4@0 + 1@1 files => 20654 bytes
+2025/07/12-23:08:47.294 2f2 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/07/12-23:08:47.294 2f2 Delete type=2 #87
+2025/07/12-23:08:47.295 2f2 Delete type=2 #82
+2025/07/12-23:08:47.295 2f2 Delete type=2 #84
+2025/07/12-23:08:47.295 2f2 Delete type=2 #79
+2025/07/12-23:08:47.295 2f2 Delete type=2 #76
+2025/07/13-00:05:56.295 2f3 Level-0 table #90: started
+2025/07/13-00:05:56.309 2f3 Level-0 table #90: 83686 bytes OK
+2025/07/13-00:05:56.321 2f3 Delete type=0 #86
