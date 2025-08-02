@@ -1,0 +1,27 @@
+<div class="feed-container">
+  <div class="feed-title store-title">
+  
+    <div class="flex-title">
+      <h2 ng-cloak ng-if="currentSource.name">
+        <span title="{{currentSource.description}}">{{currentSource.title}}</span>
+      </h2>
+    </div>
+  
+    <div class="shortcuts-toggle" ng-if="currentSource">
+  
+      <p>Pin to Sidebar</p>
+  
+      <label class="switch" ng-click="checkAnonymousSources($event)">
+          <input class="preventBlur" type="checkbox" ng-model="currentSource.isShortcut" ng-change="onToggleSource(currentSource)">
+          <span class="slider"></span>
+      </label>
+    </div>
+  
+  </div>
+  
+  <scrollable-feed items="items" ng-hide="errors.length" sponsored="sponsored" load-on-sort show-favorite>
+    <scrollable-feed-no-data>
+      <div id="oops">No items yet today <a href="" ng-click="::reload()">Try again</a></div>
+    </scrollable-feed-no-data>
+  </scrollable-feed>
+</div>

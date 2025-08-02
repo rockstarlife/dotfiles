@@ -1,9 +1,13 @@
 [Added Associations]
-image/png=imv-3.desktop;imv-2.desktop;
+image/jpeg=imv-6.desktop;
+image/png=mpv-3.desktop;imv-8.desktop;imv-7.desktop;
+video/x-matroska=mpv-2.desktop;
 
 [Default Applications]
-image/png=imv-3.desktop;
+image/jpeg=imv-6.desktop;
+image/png=mpv-3.desktop;
 text/html=google-chrome.desktop
+video/x-matroska=mpv-2.desktop;
 x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/http=google-chrome.desktop
 x-scheme-handler/https=google-chrome.desktop

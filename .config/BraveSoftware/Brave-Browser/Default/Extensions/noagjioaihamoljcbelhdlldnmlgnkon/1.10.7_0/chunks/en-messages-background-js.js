@@ -1,0 +1,1 @@
+(self.webpackChunk=self.webpackChunk||[]).push([[9320],{786:e=>{e.exports={menu:{options:"Definer Options",pdf:"PDF Reader",review:"Leave review",help:"Help Center"},prompts:{translator:"Translator",dictionary:"Dictionary",ipa:"IPA Translator",grammar:"Grammar Checker"}}}}]);

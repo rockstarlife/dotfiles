@@ -1,0 +1,1 @@
+(()=>{"use strict";const e="www4.bing.com",o="https://www.google.com/search?igu=1&embedded=1";if(location.href.includes(o),location.href.startsWith(`https://${e}/images`)&&location.href.includes("embedded=1")){const e=document.cookie;Object.defineProperty(document,"cookie",{get:()=>e})}})();

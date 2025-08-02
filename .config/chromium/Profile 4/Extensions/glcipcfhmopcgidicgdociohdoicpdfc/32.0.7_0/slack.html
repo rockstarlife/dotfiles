@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>New Tab</title>
+  <script src="js/const.global.js"></script>
+  <script src="js/const.dev.js"></script>
+
+  <meta http-equiv="Cache-control" content="public">
+
+  <link rel="stylesheet" href="stylesheets/slackPopup.css" />
+</head>
+
+<body ng-app="muzli" ng-strict-di>
+
+  <div class="shareContainer" ng-if="data.params" ng-cloak>
+    <h1>Send to Slack</h1>
+    <textarea name="name" ng-model="data.params.text"></textarea>
+    <div class="target">
+      Posting to {{data.team}}
+      <select ng-options="channel.name for channel in data.channels track by channel.id"
+        ng-model="data.selectedChannel"></select>
+    </div>
+    <div class="button" ng-click="sendMessage()">
+      <a href="">Post to Slack</a>
+    </div>
+    <p><a ng-click="logOut()" href="">Post to different team</a> (Log Out)</p>
+  </div>
+
+  <script src="lib/jquery.js"></script>
+  <script src="lib/angular.js"></script>
+  <script src="lib/mixpanel-jslib-snippet.min.js"></script>
+  <script src="js/social.js"></script>
+  <script src="modules/sources/module.js"></script>
+  <script src="modules/sources/sources.const.js"></script>
+  <script src="modules/muzli/track.srv.js"></script>
+  <script src="modules/muzli/storage.srv.js"></script>
+  <script src="modules/muzli/social.srv.js"></script>
+</body>
+
+</html>
