@@ -1,3 +1,11 @@
 .oh-my-zsh
 .config/thorium/optimization_guide_model_store/
 .config/google-chrome/component_crx_cache/
+.config/thorium/
+.config/google-chrome/
+.oh-my-zsh/
+.config/thorium/optimization_guide_model_store/
+.config/google-chrome/component_crx_cache/
+.config/google-chrome/Default/Cache/
+.config/google-chrome/Default/Code Cache/
+.oh-my-zsh/
