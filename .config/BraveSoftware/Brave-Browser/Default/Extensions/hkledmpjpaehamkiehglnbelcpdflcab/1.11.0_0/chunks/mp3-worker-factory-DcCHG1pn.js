@@ -1,1 +1,0 @@
-import{b as r}from"./index-BNzDLOmD.js";const a=async()=>{const e=await(await fetch(r.runtime.getURL("/mp3-encoder-worker.js"))).text(),t=new Blob([e],{type:"application/javascript"});return new Worker(URL.createObjectURL(t))};export{a as m};
