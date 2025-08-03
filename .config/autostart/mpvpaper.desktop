@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=MPVPaper
-Exec=mpvpaper -o "--loop --hwdec=vaapi" '*' /home/Neo/Videos/Wallpapers/suzumi-live-wallpaper.mp4
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
