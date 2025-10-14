@@ -48,6 +48,7 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 #
-theme = Catppuccin Latte
+theme = "Catppuccin Mocha"
 font-size = 20
 app-notifications = no-clipboard-copy
+
