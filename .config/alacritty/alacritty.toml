@@ -1,0 +1,31 @@
+[general]
+import = [
+    "~/.config/alacritty/catppuccin/mocha.toml", # Да, тема остается в YAML
+]
+
+# --- Настройки Шрифтов (Fonts) ---
+[font]
+size = 20.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+
+# --- Настройки окна ---
+[window]
+# Отключение декораций окна (важно для Hyprland)
+decorations = "none"
+
+
+# --- Специальные Цвета (НЕОБХОДИМО ДЛЯ ЗАВЕРШЕННОСТИ ТЕМЫ) ---
+[colors]
+
+[colors.cursor]
+# Цвет курсора и цвет текста под курсором
+text = "0x1e1e2e"
+cursor = "0xf5e0dc"
+
+# [colors.selection]
+# # Цвет выделения
+# text = "0x1e1e2e"
+# background = "0xf5e0dc"
