@@ -1,3 +1,7 @@
+# Фикс левого Alt на MacBook Air под Sway (2025 год, всё ещё нужен)
+# input "1452:657:Apple_Inc._Apple_Internal_Keyboard_/_Trackpad" {
+#     xkb_options lalt_meta
+# }
 # Default config for swayalacr
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -21,7 +25,7 @@ set $menu wmenu-run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
@@ -136,7 +140,18 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
-#
+    # 6-10 только на внешнем мониторе (HDMI-A-1)
+    workspace 1 output HDMI-A-1
+    workspace 2 output HDMI-A-1
+    workspace 3 output HDMI-A-1
+    workspace 4 output HDMI-A-1
+    workspace 5 output HDMI-A-1
+    # 1-5 только на ноуте (eDP-1)
+    workspace 6 output eDP-1
+    workspace 7 output eDP-1
+    workspace 8 output eDP-1
+    workspace 9 output eDP-1
+    workspace 10 output eDP-1
 # Layout stuff:
 #
     # You can "split" the current object of your focus with
@@ -215,40 +230,51 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
+# bar {
+#     position top
+#
+#     # When the status_command prints a new line to stdout, swaybar updates.
+#     # The default just shows the current date and time.
+#     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+#
+#     colors {
+#         statusline #ffffff
+#         background #323232
+#         inactive_workspace #32323200 #32323200 #5c5c5c
+#     }
+# }
 
 include /etc/sway/config.d/*
 
 # my cod
 bindsym $mod+c exec google-chrome-stable
 output HDMI-A-1 mode 1920x1080@100Hz pos 0 0 scale 1.2
+output HDMI-A-1 background ~/Pictures/offline-wallpapers/brain-with-chip.webp fill
 output eDP-1 mode 1440x900@59.996Hz pos -750 0 transform 90 scale 1.2
+output eDP-1 background ~/Pictures/offline-wallpapers/Mona_Lisa_by_Leonardo_da_Vinci.jpg fill
 
 input "type:keyboard" {
     xkb_layout us,ru
     xkb_options grp:win_space_toggle
 }
-# 6-10 только на внешнем мониторе (HDMI-A-1)
-workspace 1 output HDMI-A-1
-workspace 2 output HDMI-A-1
-workspace 3 output HDMI-A-1
-workspace 4 output HDMI-A-1
-workspace 5 output HDMI-A-1
-# 1-5 только на ноуте (eDP-1)
-workspace 6 output eDP-1
-workspace 7 output eDP-1
-workspace 8 output eDP-1
-workspace 9 output eDP-1
-workspace 10 output eDP-1
+# minimal view
+default_border pixel 1
+gaps inner 0
+gaps outer 0
+hide_edge_borders --i3 both
+# Screenshots grimblast
+set $alt Mod1
+# === СКРИНШОТЫ — 100% РАБОЧИЙ ВАРИАНТ (декабрь 2025 проверено) ===
+# Win+Z → только активный монитор → файл + буфер
+bindsym $mod+z exec \
+    mkdir -p ~/Pictures/Screenshots/$(date +%Y-%m) && \
+    grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') \
+         ~/Pictures/Screenshots/$(date +%Y-%m)/$(date +%Y-%m-%d_%H-%M-%S).png && \
+    wl-copy < ~/Pictures/Screenshots/$(date +%Y-%m)/$(date +%Y-%m-%d_%H-%M-%S).png
+
+# Win+X → область → файл + буфер
+bindsym $mod+x exec \
+    mkdir -p ~/Pictures/Screenshots/$(date +%Y-%m) && \
+    grim -g "$(slurp)" \
+         ~/Pictures/Screenshots/$(date +%Y-%m)/$(date +%Y-%m-%d_%H-%M-%S).png && \
+    wl-copy < ~/Pictures/Screenshots/$(date +%Y-%m)/$(date +%Y-%m-%d_%H-%M-%S).png
