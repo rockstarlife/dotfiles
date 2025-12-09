@@ -1,4 +1,15 @@
-# Фикс левого Alt на MacBook Air под Sway (2025 год, всё ещё нужен)
+## === МЫШЬ — УМЕНЬШЕНИЕ ЧУВСТВИТЕЛЬНОСТИ ===
+input "type:pointer" {
+    accel_profile flat         # убираем всё ускорение
+    pointer_accel -0.4         # от -1.0 (очень медленно) до 0.0.  
+                               # -0.6 — универсально комфортно для трейдинга
+}
+
+
+seat * hide_cursor when-typing enable
+#
+# # Дополнительно (на всякий случай, если где-то не подхватилось)
+# exec_always --no-startup-id xsetroot -cursor_name left_ptr Фикс левого Alt на MacBook Air под Sway (2025 год, всё ещё нужен)
 # input "1452:657:Apple_Inc._Apple_Internal_Keyboard_/_Trackpad" {
 #     xkb_options lalt_meta
 # }
@@ -247,7 +258,8 @@ bindsym $mod+r mode "resize"
 include /etc/sway/config.d/*
 
 # my cod
-bindsym $mod+c exec google-chrome-stable
+# bindsym $mod+c exec google-chrome-stable
+bindsym $mod+c exec google-chrome-stable --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations,Vulkan,VaapiVideoDecodeLinuxGL
 output HDMI-A-1 mode 1920x1080@100Hz pos 0 0 scale 1.2
 output HDMI-A-1 background ~/Pictures/offline-wallpapers/brain-with-chip.webp fill
 output eDP-1 mode 1440x900@59.996Hz pos -750 0 transform 90 scale 1.2
@@ -278,3 +290,17 @@ bindsym $mod+x exec \
     grim -g "$(slurp)" \
          ~/Pictures/Screenshots/$(date +%Y-%m)/$(date +%Y-%m-%d_%H-%M-%S).png && \
     wl-copy < ~/Pictures/Screenshots/$(date +%Y-%m)/$(date +%Y-%m-%d_%H-%M-%S).png
+
+bindsym $mod+Shift+z exec systemctl suspend
+
+# # Chrome без VSync → минимальный лаг + tearing control через Chrome flags
+# for_window [app_id="google-chrome" class="Google-chrome"] {
+#     inhibit_idle fullscreen
+#     no_focus
+# }
+# # Принудительно отключаем VSync в самом Chrome (это и есть аналог immediate)
+# exec_always --no-startup-id google-chrome-stable \
+#     --disable-frame-rate-limit \
+#     --disable-gpu-vsync \
+#     --enable-features=VaapiVideoDecoder,CanvasOopRasterization \
+#     --use-gl=egl
