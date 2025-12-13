@@ -165,7 +165,15 @@ rivertile -view-padding 6 -outer-padding 6 &
 # keyboard input
 riverctl keyboard-layout -options "grp:win_space_toggle" "us,ru"
 # google chrome turbo
-riverctl map normal Super C spawn "google-chrome-stable \
+# riverctl map normal Super C spawn "google-chrome-stable \
+#     --ozone-platform=wayland \
+#     --enable-features=WaylandWindowDecorations,Vulkan,VaapiVideoDecoder \
+#     --disable-gpu-driver-bug-workarounds \
+#     --ignore-gpu-blocklist \
+#     --enable-gpu-rasterization \
+#     --enable-zero-copy"
+
+riverctl map normal Control Space spawn "google-chrome-stable \
     --ozone-platform=wayland \
     --enable-features=WaylandWindowDecorations,Vulkan,VaapiVideoDecoder \
     --disable-gpu-driver-bug-workarounds \
@@ -178,12 +186,22 @@ riverctl map normal Super C spawn "google-chrome-stable \
 riverctl map normal Super D spawn fuzzel
 
 # ────────────────────── Monitors ──────────────────────
-/usr/bin/wlr-randr --output eDP-1 --transform 270 --scale 1
+# HDMI-A-1 1920x1080@100Hz
+# eDP-1 1440x900@59.996Hz
+
+# left side
+# /usr/bin/wlr-randr --output eDP-1 --transform 270 --scale 1
+# swaybg -o eDP-1 -i /home/neo/Pictures/offline-wallpapers/Mona_Lisa_by_Leonardo_da_Vinci.jpg -m fill &
+#
+# /usr/bin/wlr-randr --output HDMI-A-1 --pos 960,0 --scale 1
+# swaybg -o HDMI-A-1 -i /home/neo/Pictures/offline-wallpapers/brain-with-chip.webp -m fill &
+
+# right side
+/usr/bin/wlr-randr --output eDP-1 --pos 1920,-360 --transform 90 --scale 1
 swaybg -o eDP-1 -i /home/neo/Pictures/offline-wallpapers/Mona_Lisa_by_Leonardo_da_Vinci.jpg -m fill &
 
-/usr/bin/wlr-randr --output HDMI-A-1 --pos 960,0 --scale 1
+/usr/bin/wlr-randr --output HDMI-A-1 --pos 0,0 --scale 1
 swaybg -o HDMI-A-1 -i /home/neo/Pictures/offline-wallpapers/brain-with-chip.webp -m fill &
-
 # ────────────────────── Screenshots ──────────────────────
 # Alt+A → монитор eDP-1
 riverctl map normal Mod1 A spawn 'sh -c "
@@ -212,4 +230,24 @@ riverctl map normal Mod1 D spawn 'sh -c "
     mkdir -p \"\$dir\"
     wl-paste > \"\$dir/\$(date +%Y-%m-%d_%H-%M-%S)_\$\$.png\"
 "'
-#hello github i am here
+
+# ────────────────────── Gaps ──────────────────────
+riverctl border-width 1
+riverctl spawn "rivertile -view-padding 0 -outer-padding 0"
+
+# ────────────────────── Suspend Zzz Sleep ──────────────────────
+riverctl map normal Super+Mod1 S spawn "systemctl suspend"
+
+# ────────────────────── Подключение отключение наушников ──────────────────────
+riverctl map normal Control+Super 1 spawn "bluetoothctl connect E8:EE:CC:F7:AF:26"
+riverctl map normal Control+Super 2 spawn "bluetoothctl disconnect E8:EE:CC:F7:AF:26"
+
+# ────────────────────── Cursor Tuning ──────────────────────
+# Чувствительность -1 - 1 такие значения можно задвать.
+riverctl input pointer-1133-45098-Logitech_Signature_M650 pointer-accel -0.4
+riverctl input pointer-1452-657-bcm5974 pointer-accel 0.4
+# скрытие курсора.
+riverctl hide-cursor when-typing enabled
+riverctl hide-cursor timeout 2000
+# Babita theme size can be 16 20 22 24 28 32 40 48 56 64 72 80 88 96
+riverctl xcursor-theme Bibata-Modern-Classic 24
