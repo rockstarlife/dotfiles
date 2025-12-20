@@ -165,14 +165,6 @@ rivertile -view-padding 6 -outer-padding 6 &
 # keyboard input
 riverctl keyboard-layout -options "grp:win_space_toggle" "us,ru"
 # google chrome turbo
-# riverctl map normal Super C spawn "google-chrome-stable \
-#     --ozone-platform=wayland \
-#     --enable-features=WaylandWindowDecorations,Vulkan,VaapiVideoDecoder \
-#     --disable-gpu-driver-bug-workarounds \
-#     --ignore-gpu-blocklist \
-#     --enable-gpu-rasterization \
-#     --enable-zero-copy"
-
 riverctl map normal Control Space spawn "google-chrome-stable \
     --ozone-platform=wayland \
     --enable-features=WaylandWindowDecorations,Vulkan,VaapiVideoDecoder \
@@ -182,12 +174,18 @@ riverctl map normal Control Space spawn "google-chrome-stable \
     --enable-zero-copy"
 
 # --force-device-scale-factor=1.2"
+
 # search apps
-riverctl map normal Super D spawn fuzzel
+# riverctl map normal Super D spawn fuzzel
+riverctl map normal Mod1 Space spawn fuzzel
 
 # ────────────────────── Monitors ──────────────────────
 # HDMI-A-1 1920x1080@100Hz
 # eDP-1 1440x900@59.996Hz
+
+# solo monitor
+/usr/bin/wlr-randr --output eDP-1 --pos 0,0 --scale 1
+swaybg -o eDP-1 -i /home/neo/Pictures/offline-wallpapers/kurzgesagt-1.webp -m fill &
 
 # left side
 # /usr/bin/wlr-randr --output eDP-1 --transform 270 --scale 1
@@ -196,12 +194,15 @@ riverctl map normal Super D spawn fuzzel
 # /usr/bin/wlr-randr --output HDMI-A-1 --pos 960,0 --scale 1
 # swaybg -o HDMI-A-1 -i /home/neo/Pictures/offline-wallpapers/brain-with-chip.webp -m fill &
 
-# right side
-/usr/bin/wlr-randr --output eDP-1 --pos 1920,-360 --transform 90 --scale 1
-swaybg -o eDP-1 -i /home/neo/Pictures/offline-wallpapers/Mona_Lisa_by_Leonardo_da_Vinci.jpg -m fill &
-
-/usr/bin/wlr-randr --output HDMI-A-1 --pos 0,0 --scale 1
-swaybg -o HDMI-A-1 -i /home/neo/Pictures/offline-wallpapers/brain-with-chip.webp -m fill &
+# # right side
+# /usr/bin/wlr-randr --output eDP-1 --pos 1920,-360 --transform 90 --scale 1
+# swaybg -o eDP-1 -i /home/neo/Pictures/offline-wallpapers/Mona_Lisa_by_Leonardo_da_Vinci.jpg -m fill &
+#
+# /usr/bin/wlr-randr --output HDMI-A-1 --pos 0,0 --scale 1
+# swaybg -o HDMI-A-1 -i /home/neo/Pictures/offline-wallpapers/brain-with-chip.webp -m fill &
+#
+# # перебрасывает фокус на HDMI-A-1 при старте.
+# riverctl focus-output next
 # ────────────────────── Screenshots ──────────────────────
 # Alt+A → монитор eDP-1
 riverctl map normal Mod1 A spawn 'sh -c "
@@ -242,10 +243,22 @@ riverctl map normal Super+Mod1 S spawn "systemctl suspend"
 riverctl map normal Control+Super 1 spawn "bluetoothctl connect E8:EE:CC:F7:AF:26"
 riverctl map normal Control+Super 2 spawn "bluetoothctl disconnect E8:EE:CC:F7:AF:26"
 
-# ────────────────────── Cursor Tuning ──────────────────────
+# ────────────────────── Sensativity ──────────────────────
 # Чувствительность -1 - 1 такие значения можно задвать.
 riverctl input pointer-1133-45098-Logitech_Signature_M650 pointer-accel -0.4
 riverctl input pointer-1452-657-bcm5974 pointer-accel 0.4
+
+# ────────────────────── Touchpad ──────────────────────
+# Tap-to-click (лёгкий тап = левый клик, без физического нажатия)
+riverctl input pointer-1452-657-bcm5974 tap enabled
+# Правый клик — тап двумя пальцами (стандарт в libinput, работает надёжно)
+riverctl input pointer-1452-657-bcm5974 click-method clickfinger
+# Опционально: тап тремя пальцами = средний клик (paste)
+riverctl input pointer-1452-657-bcm5974 middle-emulation enabled
+# Если хочешь физическое нажатие трекпада = левый клик (как в macOS)
+riverctl input pointer-1452-657-bcm5974 click-method button-areas
+
+# ────────────────────── Cursor Tuning ──────────────────────
 # скрытие курсора.
 riverctl hide-cursor when-typing enabled
 riverctl hide-cursor timeout 2000
