@@ -127,8 +127,8 @@ for mode in normal locked; do
   riverctl map $mode None XF86Eject spawn 'eject -T'
 
   # Control pulse audio volume with pamixer (https://github.com/cdemoulins/pamixer)
-  riverctl map $mode None XF86AudioRaiseVolume spawn 'pamixer -i 5'
-  riverctl map $mode None XF86AudioLowerVolume spawn 'pamixer -d 5'
+  riverctl map -repeat $mode None XF86AudioRaiseVolume spawn 'pamixer -i 1'
+  riverctl map -repeat $mode None XF86AudioLowerVolume spawn 'pamixer -d 1'
   riverctl map $mode None XF86AudioMute spawn 'pamixer --toggle-mute'
 
   # Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
@@ -138,8 +138,11 @@ for mode in normal locked; do
   riverctl map $mode None XF86AudioNext spawn 'playerctl next'
 
   # Control screen backlight brightness with brightnessctl (https://github.com/Hummer12007/brightnessctl)
-  riverctl map $mode None XF86MonBrightnessUp spawn 'brightnessctl set +5%'
-  riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl set 5%-'
+  riverctl map -repeat $mode None XF86MonBrightnessUp spawn 'brightnessctl set +1%'
+  riverctl map -repeat $mode None XF86MonBrightnessDown spawn 'brightnessctl set 1%-'
+  # Keyboard flash
+  riverctl map -repeat $mode None XF86KbdBrightnessUp spawn 'brightnessctl -d smc::kbd_backlight set +1%'
+  riverctl map -repeat $mode None XF86KbdBrightnessDown spawn 'brightnessctl -d smc::kbd_backlight set 1%-'
 done
 
 # Set background and border color
@@ -200,6 +203,7 @@ swaybg -o eDP-1 -i /home/neo/Pictures/offline-wallpapers/kurzgesagt-1.webp -m fi
 #
 # /usr/bin/wlr-randr --output HDMI-A-1 --pos 0,0 --scale 1
 # swaybg -o HDMI-A-1 -i /home/neo/Pictures/offline-wallpapers/brain-with-chip.webp -m fill &
+# # swaybg -o HDMI-A-1 -i /home/neo/Pictures/offline-wallpapers/The-Creation-of-Adam.png -m fill &
 #
 # # перебрасывает фокус на HDMI-A-1 при старте.
 # riverctl focus-output next
@@ -264,3 +268,10 @@ riverctl hide-cursor when-typing enabled
 riverctl hide-cursor timeout 2000
 # Babita theme size can be 16 20 22 24 28 32 40 48 56 64 72 80 88 96
 riverctl xcursor-theme Bibata-Modern-Classic 24
+
+# # ────────────────────── Volume ──────────────────────
+# # Медиа-клавиши громкости и mute (работают всегда, даже на локскрине)
+# riverctl map -repeat locked None XF86AudioMute pactl set-sink-mute @DEFAULT_SINK@ toggle
+# riverctl map -repeat locked None XF86AudioLowerVolume pactl set-sink-volume @DEFAULT_SINK@ -5%
+# riverctl map -repeat locked None XF86AudioRaiseVolume pactl set-sink-volume @DEFAULT_SINK@ +5%
+# riverctl map -repeat locked None XF86AudioMicMute pactl set-source-mute @DEFAULT_SOURCE@ toggle
