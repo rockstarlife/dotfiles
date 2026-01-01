@@ -187,9 +187,9 @@ riverctl map normal Mod1 Space spawn fuzzel
 # HDMI-A-1 1920x1080@100Hz
 # eDP-1 1440x900@59.996Hz
 
-# solo monitor
-/usr/bin/wlr-randr --output eDP-1 --pos 0,0 --scale 1
-swaybg -o eDP-1 -i /home/neo/Pictures/offline-wallpapers/kurzgesagt-1.webp -m fill &
+# # solo monitor
+# /usr/bin/wlr-randr --output eDP-1 --pos 0,0 --scale 1
+# swaybg -o eDP-1 -i /home/neo/Pictures/offline-wallpapers/kurzgesagt-1.webp -m fill &
 
 # left side
 # /usr/bin/wlr-randr --output eDP-1 --transform 270 --scale 1
@@ -198,16 +198,16 @@ swaybg -o eDP-1 -i /home/neo/Pictures/offline-wallpapers/kurzgesagt-1.webp -m fi
 # /usr/bin/wlr-randr --output HDMI-A-1 --pos 960,0 --scale 1
 # swaybg -o HDMI-A-1 -i /home/neo/Pictures/offline-wallpapers/brain-with-chip.webp -m fill &
 
-# # right side
-# /usr/bin/wlr-randr --output eDP-1 --pos 1920,-360 --transform 90 --scale 1
-# swaybg -o eDP-1 -i /home/neo/Pictures/offline-wallpapers/Mona_Lisa_by_Leonardo_da_Vinci.jpg -m fill &
-#
-# /usr/bin/wlr-randr --output HDMI-A-1 --pos 0,0 --scale 1
-# swaybg -o HDMI-A-1 -i /home/neo/Pictures/offline-wallpapers/brain-with-chip.webp -m fill &
-# # swaybg -o HDMI-A-1 -i /home/neo/Pictures/offline-wallpapers/The-Creation-of-Adam.png -m fill &
-#
-# # перебрасывает фокус на HDMI-A-1 при старте.
-# riverctl focus-output next
+# right side
+/usr/bin/wlr-randr --output eDP-1 --pos 1920,-360 --transform 90 --scale 1
+swaybg -o eDP-1 -i /home/neo/Pictures/offline-wallpapers/Mona_Lisa_by_Leonardo_da_Vinci.jpg -m fill &
+
+/usr/bin/wlr-randr --output HDMI-A-1 --pos 0,0 --scale 1
+swaybg -o HDMI-A-1 -i /home/neo/Pictures/offline-wallpapers/brain-with-chip.webp -m fill &
+# swaybg -o HDMI-A-1 -i /home/neo/Pictures/offline-wallpapers/The-Creation-of-Adam.png -m fill &
+
+# перебрасывает фокус на HDMI-A-1 при старте.
+riverctl focus-output next
 # ────────────────────── Screenshots ──────────────────────
 # Alt+A → монитор eDP-1
 riverctl map normal Mod1 A spawn 'sh -c "
@@ -264,12 +264,17 @@ riverctl input pointer-1452-657-bcm5974 click-method button-areas
 riverctl hide-cursor when-typing enabled
 riverctl hide-cursor timeout 2000
 # Babita theme size can be 16 20 22 24 28 32 40 48 56 64 72 80 88 96
-# riverctl xcursor-theme Bibata-Modern-Classic 24
+riverctl xcursor-theme Bibata-Modern-Classic 24
 # riverctl xcursor-theme Bibata-Modern-Amber 24
-riverctl xcursor-theme Bibata-Modern-Ice 24
+# riverctl xcursor-theme Bibata-Modern-Ice 24
 
 # ────────────────────── decorations ──────────────────────
 # riverctl border-width 2                # толщина 2 px
 # riverctl border-color-focused 0x000000 # чёрная у фокусированного
 # riverctl border-color-unfocused 0x00000000 # полностью прозрачная у остальных (альфа 00)
 # riverctl border-color-urgent 0xff0000  # опционально, красный для urgent, если хочешь
+
+# ────────────────────── for Gnome look Nautilus ──────────────────────
+riverctl spawn '/usr/lib/xdg-desktop-portal-gtk -r'
+riverctl spawn '/usr/lib/xdg-desktop-portal -r'
+riverctl spawn '/usr/lib/xdg-desktop-portal-wlr -r'
