@@ -91,11 +91,11 @@ for i in $(seq 1 9); do
   riverctl map normal Super+Shift+Control $i toggle-view-tags $tags
 done
 
-# Super+0 to focus all tags
-# Super+Shift+0 to tag focused view with all tags
-all_tags=$(((1 << 32) - 1))
-riverctl map normal Super 0 set-focused-tags $all_tags
-riverctl map normal Super+Shift 0 set-view-tags $all_tags
+# # Super+0 to focus all tags
+# # Super+Shift+0 to tag focused view with all tags
+# all_tags=$(((1 << 32) - 1))
+# riverctl map normal Super 0 set-focused-tags $all_tags
+# riverctl map normal Super+Shift 0 set-view-tags $all_tags
 
 # Super+Space to toggle float
 # riverctl map normal Super Space toggle-float
@@ -162,7 +162,8 @@ riverctl rule-add -app-id "bar" csd
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-rivertile -view-padding 6 -outer-padding 6 &
+# rivertile -view-padding 6 -outer-padding 6 &
+rivertile -view-padding 0 -outer-padding 0 &
 
 # my cod
 # keyboard input
@@ -236,10 +237,6 @@ riverctl map normal Mod1 D spawn 'sh -c "
     wl-paste > \"\$dir/\$(date +%Y-%m-%d_%H-%M-%S)_\$\$.png\"
 "'
 
-# ────────────────────── Gaps ──────────────────────
-riverctl border-width 1
-riverctl spawn "rivertile -view-padding 0 -outer-padding 0"
-
 # ────────────────────── Suspend Zzz Sleep ──────────────────────
 riverctl map normal Super+Mod1 S spawn "systemctl suspend"
 
@@ -267,11 +264,12 @@ riverctl input pointer-1452-657-bcm5974 click-method button-areas
 riverctl hide-cursor when-typing enabled
 riverctl hide-cursor timeout 2000
 # Babita theme size can be 16 20 22 24 28 32 40 48 56 64 72 80 88 96
-riverctl xcursor-theme Bibata-Modern-Classic 24
+# riverctl xcursor-theme Bibata-Modern-Classic 24
+# riverctl xcursor-theme Bibata-Modern-Amber 24
+riverctl xcursor-theme Bibata-Modern-Ice 24
 
-# # ────────────────────── Volume ──────────────────────
-# # Медиа-клавиши громкости и mute (работают всегда, даже на локскрине)
-# riverctl map -repeat locked None XF86AudioMute pactl set-sink-mute @DEFAULT_SINK@ toggle
-# riverctl map -repeat locked None XF86AudioLowerVolume pactl set-sink-volume @DEFAULT_SINK@ -5%
-# riverctl map -repeat locked None XF86AudioRaiseVolume pactl set-sink-volume @DEFAULT_SINK@ +5%
-# riverctl map -repeat locked None XF86AudioMicMute pactl set-source-mute @DEFAULT_SOURCE@ toggle
+# ────────────────────── decorations ──────────────────────
+# riverctl border-width 2                # толщина 2 px
+# riverctl border-color-focused 0x000000 # чёрная у фокусированного
+# riverctl border-color-unfocused 0x00000000 # полностью прозрачная у остальных (альфа 00)
+# riverctl border-color-urgent 0xff0000  # опционально, красный для urgent, если хочешь

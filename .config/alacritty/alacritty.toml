@@ -14,8 +14,9 @@ family = "JetBrainsMono Nerd Font"
 # --- Настройки окна ---
 [window]
 # Отключение декораций окна (важно для Hyprland)
-decorations = "none"
-
+# decorations = "none"
+decorations = "buttonless"  # или "buttonless" если без кнопок закрытия "full"
+decorations_theme_variant = "Dark"  # или "Light"/"None" под твою тему
 
 # --- Специальные Цвета (НЕОБХОДИМО ДЛЯ ЗАВЕРШЕННОСТИ ТЕМЫ) ---
 [colors]
@@ -29,4 +30,3 @@ cursor = "0xf5e0dc"
 # # Цвет выделения
 # text = "0x1e1e2e"
 # background = "0xf5e0dc"
-
