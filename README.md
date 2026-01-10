@@ -26,7 +26,6 @@ starship
 telegram-desktop
 termdown
 tesseract
-yay
 yazi
 yt-dlp
 zram-generator
