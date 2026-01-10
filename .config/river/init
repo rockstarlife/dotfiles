@@ -11,8 +11,10 @@
 # Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
 
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
-# riverctl map normal Super+Shift Return spawn foot
-riverctl map normal Super+Shift Return spawn alacritty
+
+# ────────────────────── Terminal ──────────────────────
+# riverctl map normal Super+Shift Return spawn alacritty
+riverctl map normal Alt Space spawn alacritty
 
 # Super+Q to close the focused view
 riverctl map normal Super Q close
@@ -176,13 +178,14 @@ riverctl map normal Control Space spawn "google-chrome-stable \
     --disable-gpu-driver-bug-workarounds \
     --ignore-gpu-blocklist \
     --enable-gpu-rasterization \
-    --enable-zero-copy"
-
+    --enable-zero-copy \
+    --start-fullscreen"
 # --force-device-scale-factor=1.2"
 
-# search apps
-# riverctl map normal Super D spawn fuzzel
-riverctl map normal Mod1 Space spawn fuzzel
+# ────────────────────── search apps with fuzzel ──────────────────────
+# riverctl map normal Mod1 Space spawn fuzzel
+# riverctl map normal Alt Tab spawn fuzzel
+riverctl map normal Alt Return spawn fuzzel
 
 # ────────────────────── Monitors ──────────────────────
 # HDMI-A-1 1920x1080@100Hz
@@ -279,4 +282,11 @@ riverctl spawn '/usr/lib/xdg-desktop-portal-wlr -r'
 
 # ────────────────────── Eww ──────────────────────
 riverctl spawn 'eww daemon'
-riverctl map normal Super+Alt Space spawn 'sh -c "~/.config/eww/time"'
+# riverctl map normal Super+Alt Space spawn 'sh -c "~/.config/eww/time"'
+riverctl map normal Super Tab spawn 'sh -c "~/.config/eww/time"'
+
+# ────────────────────── Plans ──────────────────────
+# Переназначить Alt+Space = открыть терминал.
+# Super+Tab = time
+# Alt+Return = fuzzel
+# перенести в dotfiles configs about fuzzel, eww.

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if eww list-windows | grep -q "*time_popup"; then
+
+  eww close time_popup
+
+else
+
+  eww open time_popup
+
+  sleep 1
+
+  eww close time_popup
+
+fi

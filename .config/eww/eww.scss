@@ -1,0 +1,28 @@
+* {
+  all: unset;
+}
+
+window {
+  background-color: transparent;
+}
+
+.time-container {
+  background-color: #1e1e2e;
+  border: 2px solid #89b4fa;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.time {
+  font-family: "JetBrains Mono";
+  font-size: 48px;
+  font-weight: bold;
+  color: #cdd6f4;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-family: "JetBrains Mono";
+  font-size: 20px;
+  color: #cdd6f4;
+}

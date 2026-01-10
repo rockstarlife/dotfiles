@@ -1,0 +1,28 @@
+(defwindow time_popup
+  :monitor 0
+  :geometry (geometry 
+    :x "0%"
+    :y "0%"
+    :width "400px"
+    :height "200px"
+    :anchor "center center")
+  :stacking "overlay"
+  :exclusive false
+  :focusable true
+  :namespace "eww_time"
+  (eventbox 
+    :onkeypress "if [ '{}' = 'Escape' ]; then eww close time_popup; fi"
+    (box 
+      :class "time-container"
+      :orientation "v"
+      :space-evenly false
+      :halign "center"
+      :valign "center"
+      (label :class "time" :text "${time}")
+      (label :class "date" :text "${date}"))))
+
+(defpoll time :interval "1s"
+  "date +'%H:%M'")
+
+(defpoll date :interval "1s"
+  "date +'%A %B %d.%m.%Y'")
