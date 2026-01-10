@@ -12,13 +12,10 @@ foliate
 fuzzel
 git
 google-chrome
-htop
 imv
 nautilus
-neofetch
 neovim
 pacgraph
-paru
 river
 sddm
 shadowsocks
