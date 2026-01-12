@@ -151,9 +151,14 @@ for mode in normal locked; do
 done
 
 # Set background and border color
-riverctl background-color 0x002b36
-riverctl border-color-focused 0x93a1a1
-riverctl border-color-unfocused 0x586e75
+# riverctl background-color 0x002b36
+# riverctl border-color-focused 0x93a1a1
+# riverctl border-color-unfocused 0x586e75
+
+riverctl background-color 0x00000000
+# riverctl background-color 0x1e1e2e
+riverctl border-color-focused 0x89b4faff
+riverctl border-color-unfocused 0x444444ff
 
 # Set keyboard repeat rate
 riverctl set-repeat 50 300
@@ -164,12 +169,16 @@ riverctl rule-add -app-id 'float*' -title 'foo' float
 # Make all views with app-id "bar" and any title use client-side decorations
 riverctl rule-add -app-id "bar" csd
 
+# ────────────────────── layout generators ──────────────────────
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-# rivertile -view-padding 6 -outer-padding 6 &
 rivertile -view-padding 0 -outer-padding 0 &
+# rivertile -view-padding 6 -outer-padding 6 &
 
+# rivercarro custom
+# riverctl default-layout rivercarro
+# rivercarro -inner-gaps 0 -outer-gaps 0 -main-ratio 0.6 &
 # ────────────────────── my cod ──────────────────────
 # keyboard input
 riverctl keyboard-layout -options "grp:win_space_toggle" "us,ru"
