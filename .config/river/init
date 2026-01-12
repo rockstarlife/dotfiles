@@ -14,7 +14,9 @@
 
 # ────────────────────── Terminal ──────────────────────
 # riverctl map normal Super+Shift Return spawn alacritty
-riverctl map normal Alt Space spawn alacritty
+# riverctl map normal Alt Space spawn alacritty
+riverctl map normal Alt Space spawn footclient
+riverctl spawn 'foot --server'
 
 # Super+Q to close the focused view
 riverctl map normal Super Q close
@@ -290,3 +292,4 @@ riverctl map normal Super Tab spawn 'sh -c "~/.config/eww/time"'
 # Super+Tab = time
 # Alt+Return = fuzzel
 # перенести в dotfiles configs about fuzzel, eww.
+# перешел на foot, foot-server.
