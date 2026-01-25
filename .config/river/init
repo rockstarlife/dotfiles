@@ -135,6 +135,8 @@ for mode in normal locked; do
   riverctl map -repeat $mode None XF86AudioRaiseVolume spawn 'pamixer -i 1'
   riverctl map -repeat $mode None XF86AudioLowerVolume spawn 'pamixer -d 1'
   riverctl map $mode None XF86AudioMute spawn 'pamixer --toggle-mute'
+  riverctl map -repeat $mode None Prior spawn 'pamixer -i 1' # PgUp → +1%
+  riverctl map -repeat $mode None Next spawn 'pamixer -d 1'  # PgDn → -1%
 
   # Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
   riverctl map $mode None XF86AudioMedia spawn 'playerctl play-pause'
@@ -279,8 +281,8 @@ riverctl input pointer-1133-45098-Logitech_Signature_M650 accel-profile flat
 riverctl input pointer-1133-45098-Logitech_Signature_M650 scroll-factor 0.7 # 0.1–2.0, меньше — медленнее
 #usb mouse
 riverctl input pointer-1133-50504-Logitech_USB_Receiver_Mouse pointer-accel -0.4
-riverctl input pointer-1133-50504-Logitech_USB_Receiver_Mouse accel-profile flat
-riverctl input pointer-1133-50504-Logitech_USB_Receiver_Mouse scroll-factor 0.7 # 0.1–2.0, меньше — медленнее
+riverctl input pointer-1133-50504-Logitech_USB_Receiver_Mouse accel-profile flat # курсор без ускорения, ползно для точной работы мышью.
+riverctl input pointer-1133-50504-Logitech_USB_Receiver_Mouse scroll-factor 0.7  # 0.1–2.0, меньше — медленнее
 
 # ────────────────────── Touchpad ──────────────────────
 # Чувствительность -1 - 1 такие значения можно задавать.
