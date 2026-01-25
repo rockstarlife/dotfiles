@@ -238,27 +238,11 @@ riverctl focus-output next
 # # перебрасывает курсор в лево по максимум.
 # # wlrctl pointer move -3000 0
 # riverctl spawn 'sh -c "wlrctl pointer move -3000 0"'
+
 # ────────────────────── Screenshots ──────────────────────
-# Alt+A → монитор eDP-1
-riverctl map normal Mod1 A spawn 'sh -c "
-    # Копируем монитор eDP-1 в буфер
-    grim -o \"eDP-1\" - | wl-copy
-    # Сохраняем из буфера в файл
-    dir=\"\$HOME/Pictures/Screenshots/\$(date +%Y-%m)\"
-    mkdir -p \"\$dir\"
-    wl-paste > \"\$dir/\$(date +%Y-%m-%d_%H-%M-%S)_\$\$.png\"
-"'
-# Alt+S → монитор HDMI-A-1
-riverctl map normal Mod1 S spawn 'sh -c "
-    # Копируем монитор HDMI-A-1 в буфер
-    grim -o \"HDMI-A-1\" - | wl-copy
-    # Сохраняем из буфера в файл
-    dir=\"\$HOME/Pictures/Screenshots/\$(date +%Y-%m)\"
-    mkdir -p \"\$dir\"
-    wl-paste > \"\$dir/\$(date +%Y-%m-%d_%H-%M-%S)_\$\$.png\"
-"'
-# Alt+D → выбранная область
-riverctl map normal Mod1 D spawn 'sh -c "
+# new
+# Alt+1 → выбранная область
+riverctl map normal Alt 1 spawn 'sh -c "
     # Копируем выбранную область в буфер
     grim -g \"\$(slurp)\" - | wl-copy
     # Сохраняем из буфера в файл
@@ -266,6 +250,53 @@ riverctl map normal Mod1 D spawn 'sh -c "
     mkdir -p \"\$dir\"
     wl-paste > \"\$dir/\$(date +%Y-%m-%d_%H-%M-%S)_\$\$.png\"
 "'
+
+# Alt+2 → монитор HDMI-A-1
+riverctl map normal Alt 2 spawn 'sh -c "
+    # Копируем монитор HDMI-A-1 в буфер
+    grim -o \"HDMI-A-1\" - | wl-copy
+    # Сохраняем из буфера в файл
+    dir=\"\$HOME/Pictures/Screenshots/\$(date +%Y-%m)\"
+    mkdir -p \"\$dir\"
+    wl-paste > \"\$dir/\$(date +%Y-%m-%d_%H-%M-%S)_\$\$.png\"
+"'
+
+# Alt+3 → монитор eDP-1
+riverctl map normal Alt 3 spawn 'sh -c "
+    # Копируем монитор eDP-1 в буфер
+    grim -o \"eDP-1\" - | wl-copy
+    # Сохраняем из буфера в файл
+    dir=\"\$HOME/Pictures/Screenshots/\$(date +%Y-%m)\"
+    mkdir -p \"\$dir\"
+    wl-paste > \"\$dir/\$(date +%Y-%m-%d_%H-%M-%S)_\$\$.png\"
+"'
+# # Alt+A → монитор eDP-1
+# riverctl map normal Mod1 A spawn 'sh -c "
+#     # Копируем монитор eDP-1 в буфер
+#     grim -o \"eDP-1\" - | wl-copy
+#     # Сохраняем из буфера в файл
+#     dir=\"\$HOME/Pictures/Screenshots/\$(date +%Y-%m)\"
+#     mkdir -p \"\$dir\"
+#     wl-paste > \"\$dir/\$(date +%Y-%m-%d_%H-%M-%S)_\$\$.png\"
+# "'
+# # Alt+S → монитор HDMI-A-1
+# riverctl map normal Mod1 S spawn 'sh -c "
+#     # Копируем монитор HDMI-A-1 в буфер
+#     grim -o \"HDMI-A-1\" - | wl-copy
+#     # Сохраняем из буфера в файл
+#     dir=\"\$HOME/Pictures/Screenshots/\$(date +%Y-%m)\"
+#     mkdir -p \"\$dir\"
+#     wl-paste > \"\$dir/\$(date +%Y-%m-%d_%H-%M-%S)_\$\$.png\"
+# "'
+# # Alt+D → выбранная область
+# riverctl map normal Mod1 D spawn 'sh -c "
+#     # Копируем выбранную область в буфер
+#     grim -g \"\$(slurp)\" - | wl-copy
+#     # Сохраняем из буфера в файл
+#     dir=\"\$HOME/Pictures/Screenshots/\$(date +%Y-%m)\"
+#     mkdir -p \"\$dir\"
+#     wl-paste > \"\$dir/\$(date +%Y-%m-%d_%H-%M-%S)_\$\$.png\"
+# "'
 
 # ────────────────────── Suspend Zzz Sleep ──────────────────────
 riverctl map normal Super+Mod1 S spawn "systemctl suspend"
