@@ -218,6 +218,12 @@ swaybg -o eDP-1 -i /home/neo/Pictures/offline-wallpapers/kurzgesagt-1.webp -m fi
 riverctl focus-output next
 # riverctl spawn 'sh -c "wlrctl pointer move 1441 0"'
 
+# Отключить встроенный экран (Alt+Shift + -)
+riverctl map normal Alt+Shift minus spawn "wlr-randr --output eDP-1 --off"
+
+# Включить и поставить на место слева (-1440,0) (Alt+Shift + =)
+riverctl map normal Alt+Shift equal spawn "wlr-randr --output eDP-1 --on --preferred --pos -1440,0 --scale 1"
+
 # left side
 # /usr/bin/wlr-randr --output eDP-1 --transform 270 --scale 1
 # swaybg -o eDP-1 -i /home/neo/Pictures/offline-wallpapers/Mona_Lisa_by_Leonardo_da_Vinci.jpg -m fill &
