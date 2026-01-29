@@ -220,6 +220,7 @@ riverctl focus-output next
 
 # Отключить встроенный экран (Alt+Shift + -)
 riverctl map normal Alt+Shift minus spawn "wlr-randr --output eDP-1 --off"
+riverctl spawn "wlr-randr --output eDP-1 --off"
 
 # Включить и поставить на место слева (-1440,0) (Alt+Shift + =)
 riverctl map normal Alt+Shift equal spawn "wlr-randr --output eDP-1 --on --preferred --pos -1440,0 --scale 1"
@@ -351,6 +352,8 @@ riverctl spawn '/usr/lib/xdg-desktop-portal-wlr -r'
 riverctl spawn 'eww daemon'
 # riverctl map normal Super+Alt Space spawn 'sh -c "~/.config/eww/time"'
 riverctl map normal Super Tab spawn 'sh -c "~/.config/eww/time"'
+
+riverctl map normal Super+Shift Tab spawn "pkill eww"
 
 # ────────────────────── Plans ──────────────────────
 # Переназначить Alt+Space = открыть терминал.
